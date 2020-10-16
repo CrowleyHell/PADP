@@ -1,4 +1,4 @@
 package lab2;
 
-public class main {
+public class Main {
 }
