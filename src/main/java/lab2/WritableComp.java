@@ -12,5 +12,5 @@ public class WritableComp implements WritableComparable<WritableComp> {
         out.writeInt(flagAir);
     }
 
-    public void readFile()
+    public void readFields()
 }
