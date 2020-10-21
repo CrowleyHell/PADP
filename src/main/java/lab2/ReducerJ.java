@@ -26,7 +26,7 @@ public class ReducerJ extends Reducer<WritableComp, Text, Text, Text> {
             sum += delTime;
             amount++;
         }
-        sum = sum/amount;
-        context.write();
+        float mid = sum/amount;
+        context.write(nameAir, new Text(minDel + ", " + maxDel + ", " + mid));
     }
 }
