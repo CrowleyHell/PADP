@@ -1,4 +1,5 @@
 package lab2;
 
-public class AirMapper {
+public class AirMapper extends {
+
 }
