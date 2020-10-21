@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class AirMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
     public void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
-        public String str = value.toString().replace(',', '&').
+        String str = value.toString().replace(',', '&').replaceAll("\"", "");
+        
     }
 }
