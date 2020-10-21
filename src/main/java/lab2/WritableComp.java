@@ -18,5 +18,5 @@ public class WritableComp implements WritableComparable<WritableComp> {
         flagAir = inp.readInt();
     }
 
-    public int compareTo()
+    public int CompareTo()
 }
