@@ -8,6 +8,15 @@ import java.io.IOException;
 
 public class WritableComp implements WritableComparable<WritableComp> {
     private int codeAir, flagAir;
+
+    public int getCodeAir() {
+        return codeAir;
+    }
+
+    public int getFlagAir() {
+        return flagAir;
+    }
+
     public void write(DataOutput out) throws IOException {
         out.writeInt(codeAir);
         out.writeInt(flagAir);
@@ -19,7 +28,12 @@ public class WritableComp implements WritableComparable<WritableComp> {
     }
 
     public int compareTo(WritableComp obj) {
-        th
+        int res = Integer.compare(this.codeAir, obj.getCodeAir());
+        if (res == 0){
+            int secRes = Integer.compare(this.flagAir, obj.getFlagAir());
+            return secRes;
+        }
+        return res;
     }
 
     @Override
