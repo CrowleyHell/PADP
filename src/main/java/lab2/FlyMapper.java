@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class FlyMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
     public void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
-        
+        String[] str = value.toString().
     }
 }
 
