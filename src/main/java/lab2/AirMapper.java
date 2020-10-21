@@ -14,7 +14,6 @@ public class AirMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
                 .replace(',', '&')
                 .replaceAll("\"", "")
                 .split("&");
-        context.write(new WritableComp(str[0], ));
-
+        context.write(new WritableComp(Integer.parseInt(str[0]), 0), new Text(str[1]));
     }
 }
