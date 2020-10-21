@@ -1,9 +1,13 @@
 package lab2;
 
-import org.apache.hadoop.io.RawComparator;
 import org.apache.hadoop.io.WritableComparable;
+import org.apache.hadoop.io.WritableComparator;
 
-public class GroupComp implements RawComparator {
+public class GroupComp extends WritableComparator {
+
+    public GroupComp() {
+        super(WritableComp.class,true);
+    }
     public int compare(WritableComparable first, WritableComparable second) {
         WritableComp compFirst, compSec;
         compFirst = (WritableComp) first;
