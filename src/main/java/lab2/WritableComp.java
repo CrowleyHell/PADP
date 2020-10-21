@@ -19,7 +19,7 @@ public class WritableComp implements WritableComparable<WritableComp> {
     }
 
     public int compareTo(WritableComp obj) {
-        
+        th
     }
 
     @Override
