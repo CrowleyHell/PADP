@@ -27,6 +27,6 @@ public class ReducerJ extends Reducer<WritableComp, Text, Text, Text> {
             amount++;
         }
         sum = sum/amount;
-
+        context.write();
     }
 }
