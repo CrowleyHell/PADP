@@ -9,5 +9,7 @@ import java.util.Iterator;
 public class ReducerJ extends Reducer<WritableComp, Text, Text, Text> {
     protected void reduce(WritableComp key, Iterable<Text> values, Context context) throws IOException, InterruptedException {
         Iterator<Text> iter = values.iterator();
+        Text nameAir = iter.next();
+        
     }
 }
