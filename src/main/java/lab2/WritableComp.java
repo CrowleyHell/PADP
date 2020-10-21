@@ -10,6 +10,7 @@ public class WritableComp implements WritableComparable<WritableComp> {
     private int codeAir, flagAir;
 
     public WritableComp(int codeAir, int flagAir) {
+        super();
         this.codeAir = codeAir;
         this.flagAir = flagAir;
     }
