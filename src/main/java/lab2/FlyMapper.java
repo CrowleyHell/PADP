@@ -6,8 +6,10 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class FlyMapper {
-    public class FlyMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
-        public void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException
+
+public class FlyMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
+    public void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
+        
     }
 }
+
