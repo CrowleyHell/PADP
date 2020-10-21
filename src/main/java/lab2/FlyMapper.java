@@ -10,7 +10,7 @@ import java.io.IOException;
 public class FlyMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
     public void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
         String[] str = value.toString().split(",");
-        context.write(new WritableComp());
+        context.write(new WritableComp(Integer.parseInt(str[14]), 1), new Text(str[18]));
     }
 }
 
