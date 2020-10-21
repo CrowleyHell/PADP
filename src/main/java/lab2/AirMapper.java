@@ -8,6 +8,8 @@ import org.apache.hadoop.mapreduce.Mapper;
 
 import java.io.IOException;
 
-public class AirMapper extends Mapper<Text, IntWritable, Text, LongWritable> {
-    public void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException
+public class AirMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
+    public void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
+        
+    }
 }
