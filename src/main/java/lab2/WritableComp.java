@@ -22,4 +22,11 @@ public class WritableComp implements WritableComparable<WritableComp> {
 
     }
 
+    @Override
+    public String toString() {
+        return "WritableComp{" +
+                "codeAir=" + codeAir +
+                ", flagAir=" + flagAir +
+                '}';
+    }
 }
