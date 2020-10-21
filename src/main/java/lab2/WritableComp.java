@@ -14,6 +14,6 @@ public class WritableComp implements WritableComparable<WritableComp> {
     }
 
     public void readFields(DataInput inp) throws IOException {
-        
+        codeAir = inp.
     }
 }
