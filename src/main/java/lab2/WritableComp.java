@@ -2,6 +2,7 @@ package lab2;
 
 import org.apache.hadoop.io.WritableComparable;
 
+import java.io.DataInput;
 import java.io.DataOutput;
 import java.io.IOException;
 
@@ -12,5 +13,7 @@ public class WritableComp implements WritableComparable<WritableComp> {
         out.writeInt(flagAir);
     }
 
-    public void readFields()
+    public void readFields(DataInput inp) throws IOException {
+        
+    }
 }
