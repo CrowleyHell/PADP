@@ -15,7 +15,7 @@ public class WritableComp implements WritableComparable<WritableComp> {
     }
 
     public WritableComp(){}
-    
+
     public int getCodeAir() {
         return codeAir;
     }
