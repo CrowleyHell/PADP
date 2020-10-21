@@ -13,5 +13,6 @@ public class GroupComp extends WritableComparator {
         compFirst = (WritableComp) first;
         compSec = (WritableComp) second;
         return Integer.compare(compFirst.getCodeAir(), compSec.getCodeAir());
+        
     }
 }
