@@ -7,8 +7,8 @@ import org.apache.hadoop.mapreduce.Reducer;
 
 import java.io.IOException;
 
-public class ReducerJ extends Reducer<Text, IntWritable, Text, LongWritable> {
+public class ReducerJ extends Reducer<WritableComp, Text, Text, LongWritable> {
     protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
-        
+
     }
 }

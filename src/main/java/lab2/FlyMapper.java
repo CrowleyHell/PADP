@@ -13,7 +13,6 @@ public class FlyMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
         if (Float.parseFloat(str[18]) != 0 && !str[18].isEmpty()){
             context.write(new WritableComp(Integer.parseInt(str[14]), 1), new Text(str[18]));
         }
-
     }
 }
 
