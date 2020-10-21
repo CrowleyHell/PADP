@@ -9,6 +9,13 @@ import java.io.IOException;
 public class WritableComp implements WritableComparable<WritableComp> {
     private int codeAir, flagAir;
 
+    public WritableComp(int codeAir, int flagAir) {
+        this.codeAir = codeAir;
+        this.flagAir = flagAir;
+    }
+
+    public WritableComp(){}
+    
     public int getCodeAir() {
         return codeAir;
     }
