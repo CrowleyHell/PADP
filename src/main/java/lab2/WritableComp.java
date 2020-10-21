@@ -1,5 +1,7 @@
 package lab2;
 
-public class WritableComp {
-    
+import org.apache.hadoop.io.WritableComparable;
+
+public class WritableComp implements WritableComparable {
+
 }
