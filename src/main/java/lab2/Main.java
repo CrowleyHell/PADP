@@ -22,7 +22,7 @@ public class Main {
         MultipleInputs.addInputPath(job, new Path(args[1]), TextInputFormat.class, AirMapper.class);
 
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
-        job.setPartitionerClass(TextPart.class);
+        job.setPartitionerClass(Partnr.class);
         job.setGroupingComparatorClass(TextComp.class);
         job.setReducerClass(ReducerJ.class);
         job.setMapOutputKeyClass(WritableComp.class);
