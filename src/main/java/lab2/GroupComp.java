@@ -1,4 +1,6 @@
 package lab2;
 
-public class GroupComp extends G {
+import org.apache.hadoop.io.RawComparator;
+
+public class GroupComp extends RawComparator {
 }
