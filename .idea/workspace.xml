@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dcdacb24-39c3-477f-94fe-9db48a62d249" name="Default Changelist" comment="" />
+    <list default="true" id="dcdacb24-39c3-477f-94fe-9db48a62d249" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab2/ReducerJ.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab2/ReducerJ.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +38,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab2/ReducerJ.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="29" column="78" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
+            <state relative-caret-position="286">
+              <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -123,11 +125,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/lab2/Partnr.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab2/WritableComp.java" />
-        <option value="$PROJECT_DIR$/src/main/java/lab2/ReducerJ.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab2/GroupComp.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab2/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab2/FlyMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab2/AirMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lab2/ReducerJ.java" />
       </list>
     </option>
   </component>
@@ -231,12 +233,12 @@
       <updated>1602849268248</updated>
       <workItem from="1602849271749" duration="4151000" />
       <workItem from="1603288147292" duration="8034000" />
-      <workItem from="1603296502252" duration="3681000" />
+      <workItem from="1603296502252" duration="4089000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15866000" />
+    <option name="totallyTimeSpent" value="16274000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
@@ -379,8 +381,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lab2/ReducerJ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="29" column="78" selection-start-line="29" selection-start-column="78" selection-end-line="29" selection-end-column="78" />
+        <state relative-caret-position="286">
+          <caret line="13" column="26" selection-start-line="13" selection-start-column="26" selection-end-line="13" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

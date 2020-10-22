@@ -11,22 +11,6 @@ public class ReducerJ extends Reducer<WritableComp, Text, Text, Text> {
         Iterator<Text> iter = values.iterator();
         Text nameAir = new Text(iter.next());
         float delTimePrev = Float.parseFloat(iter.next().toString());
-        float minDel = delTimePrev;
-        float maxDel = delTimePrev;
-        float sum = delTimePrev;
-        int amount = 1;
-        while (iter.hasNext()) {
-            float delTime = Float.parseFloat(iter.next().toString());
-            if (delTime > maxDel) {
-                maxDel = delTime;
-            }
-            if (delTime < minDel) {
-                minDel = delTime;
-            }
-            sum += delTime;
-            amount++;
-        }
-        float mid = sum/amount;
-        context.write(nameAir, new Text(minDel + ", " + maxDel + ", " + mid));
+        if (iter.hasNext())
     }
 }
