@@ -10,7 +10,7 @@ import java.io.IOException;
 public class FlyMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
     private static final int DESTAIRID = 14;
     private static final int DELAY = 18;
-    private static final String REGCOMMA = "[,]";
+    private static final String REGCOMMA = ",";
     public void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
         String[] str = value.toString().split(REGCOMMA);
         if (key.get() != 0 && !str[DELAY].isEmpty() && Float.parseFloat(str[DELAY]) != 0){
