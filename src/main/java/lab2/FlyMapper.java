@@ -8,7 +8,8 @@ import java.io.IOException;
 
 
 public class FlyMapper extends Mapper<LongWritable, Text, WritableComp, Text> {
-    protected static final int 
+    protected static final int destAirID = 14;
+    protected static final int destAirID = 14;
     public void map(LongWritable key, Text value, Mapper.Context context) throws IOException, InterruptedException {
         String[] str = value.toString().split(",");
         if (key.get() != 0 && !str[18].isEmpty() && Float.parseFloat(str[18]) != 0){
