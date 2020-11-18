@@ -23,6 +23,6 @@ public class Lab3Main {
             .mapToPair(s -> new Tuple2<>(new Tuple2<>(Long.parseLong(s[11]), Long.parseLong(s[14])), s[18]))
             .groupByKey()
             .mapValues(s -> new FlightStats(s.iterator()));
-    Map<Long, String> 
+    Map<Long, String> dictionaryMap = dictionaryAir.collectAsMap();
 
 }
