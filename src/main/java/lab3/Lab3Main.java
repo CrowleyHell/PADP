@@ -23,9 +23,9 @@ public class Lab3Main {
             .map(s -> s.split(","))
             .mapToPair(s -> new Tuple2<>(new Tuple2<>(Long.parseLong(s[11]), Long.parseLong(s[14])), s[18]))
             .groupByKey()
-            .mapValues(s -> new FlightStats(s.iterator()));
+            .mapValues(s -> FlightStats.CountStats(s.iterator()));
     Map<Long, String> dictionaryMap = dictionaryAir.collectAsMap();
     final Broadcast<Map<Long, String>> dictionaryBroadcasted = sc.broadcast(dictionaryMap);
-    JavaRDD<FlightStats> resultStats = flightsInfo
+    JavaRDD<FlightStats> resultStats = flightsInfo.map(p -> p._2.formFinalStats());
 
 }

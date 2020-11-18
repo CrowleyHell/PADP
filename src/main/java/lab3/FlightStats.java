@@ -1,10 +1,13 @@
 package lab3;
 
+import scala.Tuple2;
+
 import java.io.Serializable;
 import java.util.Iterator;
+import java.util.Map;
 
 public class FlightStats implements Serializable {
-    private int originID, arrivalID;
+    private long originID, arrivalID;
     private float maxDelayedFlight, perDelay, perCancelled;
     private String originPortName, arrivalPortName;
 
@@ -36,16 +39,16 @@ public class FlightStats implements Serializable {
         this.perCancelled = perCancelled;
     }
 
-    public String formFinalStats(){
-
+    public FlightStats formFinalStats(Map<Long, String> portNames, Tuple2<Long, Long> portIDs){
+        originID = portIDs._1;
+        arrivalID = portIDs._2;
+        originPortName = portNames.get(originID);
+        arrivalPortName = portNames.get(arrivalID);
+        return this;
     }
 
     @Override
     public String toString() {
-        return "FlightStats{" +
-                "cancelledFlights=" + cancelledFlights +
-                ", delayedFlights=" + delayedFlights +
-                ", maxDelayedFlight=" + maxDelayedFlight +
-                '}';
+        return ;
     }
 }
