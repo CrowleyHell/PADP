@@ -11,6 +11,8 @@
 <a name="lab1"><h3>Лабораторная работа №1</h3></a>
 Package: lab1
 
+Output: outputs/lab1
+
 Run:
 
     export HADOOP_CLASSPATH=target/padp-1.0.jar
@@ -20,6 +22,8 @@ Run:
 <a name="lab2"><h3>Лабораторная работа №2</h3></a>
 Package: lab2
 
+Output: outputs/lab2
+
 Run:
 
     export HADOOP_CLASSPATH=target/padp-1.0.jar
@@ -28,6 +32,8 @@ Run:
 
 <a name="lab3"><h3>Лабораторная работа №3</h3></a>   
 Package: lab3
+
+Output: outputs/lab2
 
 Run:
 
