@@ -88,29 +88,29 @@
         <subPane>
           <expand>
             <path>
-              <item name="lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
               <item name="PADP-lab2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
               <item name="PADP-lab2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
               <item name="PADP-lab2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
               <item name="PADP-lab2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
               <item name="PADP-lab2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -118,7 +118,7 @@
               <item name="lab1" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
               <item name="PADP-lab2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -126,7 +126,7 @@
               <item name="lab2" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="lab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab2" type="b2602c69:ProjectViewProjectNode" />
               <item name="PADP-lab2" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
@@ -176,16 +176,15 @@
       <workItem from="1604073857972" duration="751000" />
       <workItem from="1604075168816" duration="5488000" />
       <workItem from="1605704842859" duration="10933000" />
-      <workItem from="1605717754614" duration="2115000" />
+      <workItem from="1605717754614" duration="2417000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19287000" />
+    <option name="totallyTimeSpent" value="19589000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25773746" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -298,5 +297,81 @@
     <entry file="file://$PROJECT_DIR$/lab2.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>lab2</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.clearspring.analytics:stream:2.7.0</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
