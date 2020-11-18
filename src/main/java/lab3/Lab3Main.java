@@ -25,6 +25,6 @@ public class Lab3Main {
             .groupByKey()
             .mapValues(s -> new FlightStats(s.iterator()));
     Map<Long, String> dictionaryMap = dictionaryAir.collectAsMap();
-    final Broadcast<Map<Long, String>> dictionaryBroadcasted = 
+    final Broadcast<Map<Long, String>> dictionaryBroadcasted = dictionaryMap.
 
 }
