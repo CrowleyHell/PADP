@@ -15,6 +15,6 @@ public class Lab3Main {
             .replaceAll("\"", "")
             .split("&"))
             .mapToPair(s -> new Tuple2<>(Long.parseLong(s[0]), s[1]));
-    JavaPairRDD<Tuple2<Long, Long>, FlightStats> flightsInfo = flyData.map(s -> s.)
+    JavaPairRDD<Tuple2<Long, Long>, FlightStats> flightsInfo = flyData.filter()
 
 }
