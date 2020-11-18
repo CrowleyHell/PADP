@@ -49,6 +49,6 @@ public class FlightStats implements Serializable {
 
     @Override
     public String toString() {
-        return ;
+        return originPortName + ", " + arrivalPortName + ", " + ;
     }
 }
