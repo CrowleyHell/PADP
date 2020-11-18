@@ -10,7 +10,7 @@ public class Lab3Main {
     JavaSparkContext sc = new JavaSparkContext(conf);
     JavaRDD<String> airData = sc.textFile("airData.csv");
     JavaRDD<String> flyData = sc.textFile("flyData.csv");
-    JavaPairRDD<Long, String> dictionaryAir = airData.mapToPair()
+    JavaPairRDD<Long, String> dictionaryAir = airData.mapToPair(s -> )
 
 
 }
