@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ae8cd9a-4772-4a2a-8503-75d193d745ab" name="Default Changelist" comment="" />
+    <list default="true" id="8ae8cd9a-4772-4a2a-8503-75d193d745ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab3/Lab3Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab3/Lab3Main.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab3/Lab3Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+            <state relative-caret-position="628">
+              <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -152,12 +154,12 @@
       <workItem from="1604073857972" duration="751000" />
       <workItem from="1604075168816" duration="5488000" />
       <workItem from="1605704842859" duration="10933000" />
-      <workItem from="1605717754614" duration="323000" />
+      <workItem from="1605717754614" duration="579000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17495000" />
+    <option name="totallyTimeSpent" value="17751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -246,8 +248,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lab3/Lab3Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="36" column="1" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
+        <state relative-caret-position="628">
+          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
