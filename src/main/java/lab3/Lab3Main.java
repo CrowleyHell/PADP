@@ -19,6 +19,6 @@ public class Lab3Main {
     JavaPairRDD<Tuple2<Long, Long>, FlightStats> flightsInfo = flyData.filter(s -> !s.contains("YEAR"))
             .map(s -> s.split(","))
             .mapToPair(s -> new Tuple2<>(new Tuple2<>(Long.parseLong(s[11]), Long.parseLong(s[14])), s[18]))
-            .reduceByKey(s, k) ->  );
+            .reduceByKey((s, k) ->  );
 
 }
