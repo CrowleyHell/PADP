@@ -1,15 +1,17 @@
 package lab3;
 
 import java.io.Serializable;
+import java.util.Iterator;
 
 public class FlightStats implements Serializable {
     int cancelledFlights, delayedFlights;
     float maxDelayedFlight;
 
-    public FlightStats(){
+    public FlightStats(Iterator<String> delays){
         this.cancelledFlights = 0;
         this.delayedFlights = 0;
         this.maxDelayedFlight = 0;
+        whi
     }
 
     public void add(String delay){
