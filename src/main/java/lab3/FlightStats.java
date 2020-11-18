@@ -3,7 +3,8 @@ package lab3;
 import java.io.Serializable;
 
 public class FlightStats implements Serializable {
-    int cancelledFlights, delayedFlights, maxDelayedFlight;
+    int cancelledFlights, delayedFlights;
+    float maxDelayedFlight;
 
     public FlightStats(){
         this.cancelledFlights = 0;
@@ -14,10 +15,10 @@ public class FlightStats implements Serializable {
     public int add(String delay){
         if (delay.isEmpty()){
             cancelledFlights++;
-        } else {
+        } else if (delay != "0"){
             delayedFlights++;
-            if (Integer.parseInt(delay) > maxDelayedFlight){
-                maxDelayedFlight = delayedFlights;
+            if (Float.parseFloat(delay) > maxDelayedFlight){
+                maxDelayedFlight = Float.parseFloat(delay);
             }
         }
     }
