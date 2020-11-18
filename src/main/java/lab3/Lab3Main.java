@@ -24,5 +24,6 @@ public class Lab3Main {
             .groupByKey()
             .mapValues(s -> new FlightStats(s.iterator()));
     Map<Long, String> dictionaryMap = dictionaryAir.collectAsMap();
+    
 
 }
