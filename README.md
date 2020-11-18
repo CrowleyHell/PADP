@@ -33,7 +33,7 @@ Run:
 <a name="lab3"><h3>Лабораторная работа №3</h3></a>   
 Package: lab3
 
-Output: outputs/lab2
+Output: outputs/lab3
 
 Run:
 
