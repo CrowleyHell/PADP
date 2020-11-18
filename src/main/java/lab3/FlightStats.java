@@ -23,4 +23,13 @@ public class FlightStats implements Serializable {
             }
         }
     }
+
+    @Override
+    public String toString() {
+        return "FlightStats{" +
+                "cancelledFlights=" + cancelledFlights +
+                ", delayedFlights=" + delayedFlights +
+                ", maxDelayedFlight=" + maxDelayedFlight +
+                '}';
+    }
 }
