@@ -12,16 +12,14 @@ public class FlightStats implements Serializable {
         this.maxDelayedFlight = 0;
     }
 
-    public int add(String delay){
+    public void add(String delay){
         if (delay.isEmpty()){
             cancelledFlights++;
-        } else if (delay != "0"){
+        } else if (!delay.equals("0.00")){
             delayedFlights++;
             if (Float.parseFloat(delay) > maxDelayedFlight){
                 maxDelayedFlight = Float.parseFloat(delay);
             }
         }
     }
-
-
 }
