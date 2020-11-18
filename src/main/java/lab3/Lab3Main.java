@@ -20,6 +20,6 @@ public class Lab3Main {
             .map(s -> s.split(","))
             .mapToPair(s -> new Tuple2<>(new Tuple2<>(Long.parseLong(s[11]), Long.parseLong(s[14])), s[18]))
             .groupByKey()
-            .mapValues(s -> new FlightStats(s.iterator()))
+            .mapValues(s -> new FlightStats(s.iterator()));
 
 }
