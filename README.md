@@ -9,8 +9,18 @@
 [Лабораторная работа №4 (_в работе_)](#lab4)
 
 <a name="lab1"><h3>Лабораторная работа №1</h3></a>
-Package: No
+Package: lab1
+
 Run:
 
     export HADOOP_CLASSPATH=target/padp-1.0.jar
     hadoop lab1.WordCountApp warandpeace1.txt lab1
+
+
+<a name="lab2"><h3>Лабораторная работа №2</h3></a>
+Package: lab2
+
+Run:
+
+    export HADOOP_CLASSPATH=target/padp-1.0.jar
+    hadoop lab2.Main airData.csv flyData.csv lab2
