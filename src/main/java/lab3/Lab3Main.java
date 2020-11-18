@@ -14,7 +14,7 @@ public class Lab3Main {
     JavaPairRDD<Long, String> dictionaryAir = airData.map(s -> s.replaceFirst(",", "&")
             .replaceAll("\"", "")
             .split("&"))
-            .mapToPair(s -> new Tuple2<>(s[0], s[1]));
-
+            .mapToPair(s -> new Tuple2<>(Long.parseLong(s[0]), s[1]));
+    Java
 
 }
