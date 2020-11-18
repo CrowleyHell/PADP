@@ -1,5 +1,7 @@
 package lab3;
 
-public class FlightStats {
+import java.io.Serializable;
+
+public class FlightStats implements Serializable {
     
 }
