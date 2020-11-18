@@ -29,9 +29,7 @@ public class Lab3Main {
         Map<Long, String> dictionaryMap = dictionaryAir.collectAsMap();
         final Broadcast<Map<Long, String>> dictionaryBroadcasted = sc.broadcast(dictionaryMap);
         JavaRDD<FlightStats> resultStats = flightsInfo.map(p -> p._2.formFinalStats(dictionaryBroadcasted.value(), p._1));
-        List<FlightStats> result = resultStats.collect();
-        for (FlightStats elem : result){
-            System.out.println(elem);
-        }
+        resultStats.saveAsTextFile();
+
     }
 }
