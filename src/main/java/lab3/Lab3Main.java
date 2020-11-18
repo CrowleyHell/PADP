@@ -13,7 +13,7 @@ public class Lab3Main {
     JavaRDD<String> flyData = sc.textFile("flyData.csv");
     JavaPairRDD<Long, String> dictionaryAir = airData.map(s -> s.replaceFirst(",", "&")
             .replaceAll("\"", "")
-            .split("&")).mapToPair(s -> new Tuple2<>());
+            .split("&")).mapToPair(s -> new Tuple2<>(s[0]));
 
 
 }
