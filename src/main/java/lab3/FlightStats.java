@@ -28,12 +28,12 @@ public class FlightStats implements Serializable {
                 }
             }
         }
-        float perDelay = delayedFlights*100/generalCountFlights;
-        float perCancelled = cancelledFlights*100/generalCountFlights;
+        float perDelay = (float)delayedFlights*100/generalCountFlights;
+        float perCancelled = (float)cancelledFlights*100/generalCountFlights;
         return new FlightStats(maxDelayedFlight, perDelay, perCancelled);
     }
 
-    public FlightStats(float maxDelayedFlight, float perDelay, float perCancelled) {
+    private FlightStats(float maxDelayedFlight, float perDelay, float perCancelled) {
         this.maxDelayedFlight = maxDelayedFlight;
         this.perDelay = perDelay;
         this.perCancelled = perCancelled;
@@ -49,7 +49,7 @@ public class FlightStats implements Serializable {
 
     @Override
     public String toString() {
-        return originPortName + ", " + arrivalPortName + ", " + maxDelayedFlight + ", " +
-                ;
+        return originPortName + ", " + arrivalPortName + ", " + "Max: " + maxDelayedFlight + ", " +
+                "Delayed: " + perDelay + "%, " + "Cancelled: " + perCancelled + "%.";
     }
 }
