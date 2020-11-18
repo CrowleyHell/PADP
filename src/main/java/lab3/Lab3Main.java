@@ -4,6 +4,7 @@ import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
+import scala.Tuple2;
 
 public class Lab3Main {
     SparkConf conf = new SparkConf().setAppName("lab4");
@@ -12,7 +13,7 @@ public class Lab3Main {
     JavaRDD<String> flyData = sc.textFile("flyData.csv");
     JavaPairRDD<Long, String> dictionaryAir = airData.map(s -> s.replaceFirst(",", "&")
             .replaceAll("\"", "")
-            .split("&")).mapToPair(s ->  );
+            .split("&")).mapToPair(s -> new Tuple2<>());
 
 
 }
