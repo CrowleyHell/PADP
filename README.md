@@ -24,3 +24,11 @@ Run:
 
     export HADOOP_CLASSPATH=target/padp-1.0.jar
     hadoop lab2.Main airData.csv flyData.csv lab2
+
+
+<a name="lab3"><h3>Лабораторная работа №3</h3></a>   
+Package: lab3
+
+Run:
+
+    spark-submit --class lab3.Lab3Main --master yarn-client --num-executors target/padp-1.0.jar airData.csv flyData.csv lab3
