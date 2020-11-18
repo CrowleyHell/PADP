@@ -6,6 +6,8 @@ import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import scala.Tuple2;
 
+import java.util.Map;
+
 public class Lab3Main {
     SparkConf conf = new SparkConf().setAppName("lab4");
     JavaSparkContext sc = new JavaSparkContext(conf);
@@ -21,6 +23,6 @@ public class Lab3Main {
             .mapToPair(s -> new Tuple2<>(new Tuple2<>(Long.parseLong(s[11]), Long.parseLong(s[14])), s[18]))
             .groupByKey()
             .mapValues(s -> new FlightStats(s.iterator()));
-    
+    Map<Long, String> 
 
 }
