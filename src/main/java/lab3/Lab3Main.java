@@ -14,22 +14,25 @@ public class Lab3Main {
     private static final int PORT_NAME = 1;
     private static final int DELAY = 18;
     private static final int DEST_PORT_ID = 14;
+    private static final int ORIGIN_PORT_ID = 11;
     private static final String SPLIT = "&";
     private static final String REM_SPLIT = ",";
     private static final String PRIM_SPLIT = "\"";
+    private static final String AIRDATA_TITLE = "Code";
+    private static final String FLYDATA_TITLE = "YEAR";
     public static void main(String[] args) throws Exception{
         SparkConf conf = new SparkConf().setAppName("lab4");
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> airData = sc.textFile("airData.csv");
         JavaRDD<String> flyData = sc.textFile("flyData.csv");
-        JavaPairRDD<Long, String> dictionaryAir = airData.filter(s -> !s.contains("Code"))
-                .map(s -> s.replaceFirst(",", "&")
-                        .replaceAll("\"", "")
-                        .split("&"))
+        JavaPairRDD<Long, String> dictionaryAir = airData.filter(s -> !s.contains(AIRDATA_TITLE))
+                .map(s -> s.replaceFirst(REM_SPLIT, SPLIT)
+                        .replaceAll(PRIM_SPLIT, "")
+                        .split(SPLIT))
                 .mapToPair(s -> new Tuple2<>(Long.parseLong(s[ID_INDEX]), s[PORT_NAME]));
-        JavaPairRDD<Tuple2<Long, Long>, FlightStats> flightsInfo = flyData.filter(s -> !s.contains("YEAR"))
-                .map(s -> s.split(","))
-                .mapToPair(s -> new Tuple2<>(new Tuple2<>(Long.parseLong(s[11]), Long.parseLong(s[DEST_PORT_ID])), s[DELAY]))
+        JavaPairRDD<Tuple2<Long, Long>, FlightStats> flightsInfo = flyData.filter(s -> !s.contains(FLYDATA_TITLE))
+                .map(s -> s.split(REM_SPLIT))
+                .mapToPair(s -> new Tuple2<>(new Tuple2<>(Long.parseLong(s[ORIGIN_PORT_ID]), Long.parseLong(s[DEST_PORT_ID])), s[DELAY]))
                 .groupByKey()
                 .mapValues(s -> FlightStats.CountStats(s.iterator()));
         Map<Long, String> dictionaryMap = dictionaryAir.collectAsMap();
