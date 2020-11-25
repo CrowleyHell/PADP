@@ -7,10 +7,16 @@ import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.broadcast.Broadcast;
 import scala.Tuple2;
 
-import java.util.List;
 import java.util.Map;
 
 public class Lab3Main {
+    private static final int ID_INDEX = 0;
+    private static final int PORT_NAME = 1;
+    private static final int DELAY = 18;
+    private static final int DEST_PORT_ID = 14;
+    private static final String SPLIT = "&";
+    private static final String REM_SPLIT = ",";
+    private static final String PRIM_SPLIT = "\"";
     public static void main(String[] args) throws Exception{
         SparkConf conf = new SparkConf().setAppName("lab4");
         JavaSparkContext sc = new JavaSparkContext(conf);
@@ -20,10 +26,10 @@ public class Lab3Main {
                 .map(s -> s.replaceFirst(",", "&")
                         .replaceAll("\"", "")
                         .split("&"))
-                .mapToPair(s -> new Tuple2<>(Long.parseLong(s[0]), s[1]));
+                .mapToPair(s -> new Tuple2<>(Long.parseLong(s[ID_INDEX]), s[PORT_NAME]));
         JavaPairRDD<Tuple2<Long, Long>, FlightStats> flightsInfo = flyData.filter(s -> !s.contains("YEAR"))
                 .map(s -> s.split(","))
-                .mapToPair(s -> new Tuple2<>(new Tuple2<>(Long.parseLong(s[11]), Long.parseLong(s[14])), s[18]))
+                .mapToPair(s -> new Tuple2<>(new Tuple2<>(Long.parseLong(s[11]), Long.parseLong(s[DEST_PORT_ID])), s[DELAY]))
                 .groupByKey()
                 .mapValues(s -> FlightStats.CountStats(s.iterator()));
         Map<Long, String> dictionaryMap = dictionaryAir.collectAsMap();
