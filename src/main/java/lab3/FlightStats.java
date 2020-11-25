@@ -10,7 +10,7 @@ public class FlightStats implements Serializable {
     private long originID, arrivalID;
     private float maxDelayedFlight, perDelay, perCancelled;
     private String originPortName, arrivalPortName;
-
+    private static final String NULL_DELAY = "0.00";
     public static FlightStats CountStats(Iterator<String> delays){
         int cancelledFlights = 0;
         int delayedFlights = 0;
@@ -21,7 +21,7 @@ public class FlightStats implements Serializable {
             generalCountFlights++;
             if (delay.isEmpty()){
                 cancelledFlights++;
-            } else if (!delay.equals("0.00")){
+            } else if (!delay.equals(NULL_DELAY)){
                 delayedFlights++;
                 if (Float.parseFloat(delay) > maxDelayedFlight){
                     maxDelayedFlight = Float.parseFloat(delay);
