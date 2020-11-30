@@ -1,4 +1,4 @@
 package lab4;
 
-public class ActorSave {
+public class ActorSave extends AbstractActor {
 }
