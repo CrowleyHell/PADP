@@ -3,7 +3,7 @@ package lab4;
 import java.util.ArrayList;
 
 public class UnitT {
-    private final String packageID, jsScript, functionName, testName, expectedResulr;
+    private final String packageID, jsScript, functionName, testName, expectedResult;
     private final ArrayList<Integer> params;
 
     public UnitT(String packageID, String jsScript, String functionName, String testName, String expectedResulr, ArrayList<Integer> params) {
@@ -11,7 +11,7 @@ public class UnitT {
         this.jsScript = jsScript;
         this.functionName = functionName;
         this.testName = testName;
-        this.expectedResulr = expectedResulr;
+        this.expectedResult = expectedResulr;
         this.params = params;
     }
 
@@ -32,7 +32,7 @@ public class UnitT {
     }
 
     public String getExpectedResulr() {
-        return expectedResulr;
+        return expectedResult;
     }
 
     public ArrayList<Integer> getParams() {
