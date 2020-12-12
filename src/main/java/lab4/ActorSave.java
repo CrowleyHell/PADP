@@ -14,7 +14,7 @@ public class ActorSave extends AbstractActor {
         return ReceiveBuilder.create().match(TestResult.class, m -> {
             System.out.println("Message received" + m.getName());
             store.put(m.getID(), new HashMap<>());
-        }).match(Integer.class, )
+        }).match(Integer.class, id -> )
     }
 
 }
