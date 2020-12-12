@@ -13,6 +13,7 @@ public class AkkaMain {
         ActorRef actorRef = actorSystem.actorOf(props1);
 
         final Http http = Http.get(actorSystem);
-        ActorMaterializer actorMaterializer = ActorMaterializer.create()
+        ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
+        
     }
 }
