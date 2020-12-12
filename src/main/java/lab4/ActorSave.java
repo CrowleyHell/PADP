@@ -10,7 +10,7 @@ import java.util.concurrent.Future;
 import java.util.regex.Pattern;
 
 public class ActorSave extends AbstractActor {
-    private OutputResult    
+    private Result
     private Map<Integer, Map<String, String>> store = new HashMap<>();
     @Override
     public Receive createReceive(){
