@@ -5,6 +5,6 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class ExecutorActor {
-    ScriptEngine engine = new;
-    
+    ScriptEngine engine = new ScriptEngineManager().;
+
 }
