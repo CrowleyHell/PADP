@@ -38,4 +38,11 @@ public class UnitT {
     public ArrayList<Integer> getParams() {
         return params;
     }
+
+    @Override
+    public String toString() {
+        return "UnitT{" +
+                "params=" + params +
+                '}';
+    }
 }
