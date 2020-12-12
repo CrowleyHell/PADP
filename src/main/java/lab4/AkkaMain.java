@@ -8,6 +8,7 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 public class AkkaMain {
     public static void main() throws Exception{
@@ -18,6 +19,6 @@ public class AkkaMain {
         final Http http = Http.get(actorSystem);
         ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
         AkkaMain sample = new AkkaMain();
-        Flow<HttpRequest, Ht>
+        Flow<HttpRequest, HttpResponse, >
     }
 }
