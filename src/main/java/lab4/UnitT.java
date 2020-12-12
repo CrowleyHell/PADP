@@ -14,4 +14,28 @@ public class UnitT {
         this.expectedResulr = expectedResulr;
         this.params = params;
     }
+
+    public String getPackageID() {
+        return packageID;
+    }
+
+    public String getJsScript() {
+        return jsScript;
+    }
+
+    public String getFunctionName() {
+        return functionName;
+    }
+
+    public String getTestName() {
+        return testName;
+    }
+
+    public String getExpectedResulr() {
+        return expectedResulr;
+    }
+
+    public ArrayList<Integer> getParams() {
+        return params;
+    }
 }
