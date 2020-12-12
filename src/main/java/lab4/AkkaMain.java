@@ -1,5 +1,6 @@
 package lab4;
 
+import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.actor.Props;
@@ -19,6 +20,6 @@ public class AkkaMain {
         final Http http = Http.get(actorSystem);
         ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
         AkkaMain sample = new AkkaMain();
-        Flow<HttpRequest, HttpResponse, >
+        Flow<HttpRequest, HttpResponse, NotUsed>
     }
 }
