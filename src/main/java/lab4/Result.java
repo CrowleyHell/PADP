@@ -3,19 +3,19 @@ package lab4;
 import java.util.Map;
 
 public class Result {
-    private int id;
+    private String id;
     private Map<Integer, String> result;
 
-    public Result(int id, Map<Integer, String> result) {
+    public Result(String id, Map<Integer, String> result) {
         this.id = id;
         this.result = result;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
