@@ -22,7 +22,7 @@ public class ActorSave extends AbstractActor {
             store.put(m.getID(), new HashMap<>());
         }).match(Integer.class, id -> {
 
-            sender().tell();
+            sender().tell(IDoutput(id));
         })
     }
 
