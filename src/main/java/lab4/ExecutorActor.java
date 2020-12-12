@@ -13,7 +13,7 @@ public class ExecutorActor extends AbstractActor {
         return receiveBuilder().match(UnitT.class, m -> {
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("eName");
             engine.eval(m.getJsScript());
-            Invocable invocable = (Invocable)
+            Invocable invocable = (Invocable) engine
         })
 
     }
