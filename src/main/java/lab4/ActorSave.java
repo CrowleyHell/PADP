@@ -11,7 +11,7 @@ import java.util.regex.Pattern;
 
 public class ActorSave extends AbstractActor {
     private Result IDoutput(int id){
-        
+        return new Result()
     }
     private Map<Integer, Map<String, String>> store = new HashMap<>();
     @Override
