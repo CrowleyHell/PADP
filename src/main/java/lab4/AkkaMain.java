@@ -1,5 +1,7 @@
 package lab4;
 
 public class AkkaMain {
-    public static void main()
+    public static void main() throws Exception{
+        
+    }
 }
