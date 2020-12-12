@@ -10,10 +10,11 @@ import java.util.concurrent.Future;
 import java.util.regex.Pattern;
 
 public class ActorSave extends AbstractActor {
+    private Map<Integer, Map<String, String>> store = new HashMap<>();
+
     private Result IDoutput(int id){
         return new Result(id, store.get(id));
     }
-    private Map<Integer, Map<String, String>> store = new HashMap<>();
     @Override
     public Receive createReceive(){
         return ReceiveBuilder.create().match(TestResult.class, m -> {
