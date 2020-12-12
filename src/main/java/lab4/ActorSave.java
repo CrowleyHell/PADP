@@ -13,6 +13,7 @@ public class ActorSave extends AbstractActor {
     public Receive createReceive(){
         return ReceiveBuilder.create().match(TestResult.class, m -> {
             System.out.println("Message received" + m.getName());
+            store.put()
         })
     }
 
