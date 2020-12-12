@@ -1,5 +1,6 @@
 package lab4;
 
 public class TestResult {
-    private int 
+    private int ID;
+    
 }
