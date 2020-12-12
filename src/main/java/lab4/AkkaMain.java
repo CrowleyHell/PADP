@@ -14,6 +14,6 @@ public class AkkaMain {
 
         final Http http = Http.get(actorSystem);
         ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
-        AkkaMain 
+        AkkaMain sample = 
     }
 }
