@@ -8,7 +8,7 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class ExecutorActor extends AbstractActor {
-    return ReceiveBuilder().match
+    return receiveBuilder().match
     ScriptEngine engine = new ScriptEngineManager().getEngineByName("eName");
     engine.eval()
 
