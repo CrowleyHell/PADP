@@ -7,7 +7,7 @@ import akka.actor.Props;
 public class AkkaMain {
     public static void main() throws Exception{
         ActorSystem actorSystem =  ActorSystem.create("Akka");
-        Props
+        Props props1 = 
         ActorRef actorRef = actorSystem.actorOf()
     }
 }
