@@ -14,7 +14,7 @@ public class ExecutorActor extends AbstractActor {
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("eName");
             engine.eval(m.getJsScript());
             Invocable invocable = (Invocable) engine;
-            return invocable.invokeFunction()
+            return invocable.invokeFunction(m.getFunctionName())
         })
 
     }
