@@ -20,6 +20,6 @@ public class AkkaMain {
         final Http http = Http.get(actorSystem);
         ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
         AkkaMain sample = new AkkaMain();
-        Flow<HttpRequest, HttpResponse, NotUsed> flow = sample.cre
+        Flow<HttpRequest, HttpResponse, NotUsed> flow = sample
     }
 }
