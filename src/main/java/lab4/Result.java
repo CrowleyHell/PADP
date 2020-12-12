@@ -4,5 +4,6 @@ import java.util.Map;
 
 public class Result {
     private int id;
-    private Map<S>
+    private Map<Integer, String> result;
+    
 }
