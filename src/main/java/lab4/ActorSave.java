@@ -23,7 +23,7 @@ public class ActorSave extends AbstractActor {
         }).match(Integer.class, id -> {
 
             sender().tell(IDoutput(id), self());
-        })
+        }).build()
     }
 
 }
