@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8ae8cd9a-4772-4a2a-8503-75d193d745ab" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/lab4/ExecutorActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab4/ExecutorActor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab4/UnitT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab4/UnitT.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -93,8 +92,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab4/ExecutorActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+            <state relative-caret-position="506">
+              <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -105,9 +104,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab4/UnitT.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+            <state relative-caret-position="452">
+              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
               <folding>
+                <element signature="e#601#602#0" expanded="true" />
                 <element signature="e#633#634#0" expanded="true" />
                 <element signature="e#668#669#0" expanded="true" />
                 <element signature="e#699#700#0" expanded="true" />
@@ -148,8 +148,8 @@
         <option value="$PROJECT_DIR$/src/main/java/lab4/Result.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab4/ActorSave.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab4/Unit.java" />
-        <option value="$PROJECT_DIR$/src/main/java/lab4/ExecutorActor.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab4/UnitT.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lab4/ExecutorActor.java" />
       </list>
     </option>
   </component>
@@ -285,12 +285,12 @@
       <workItem from="1606295878770" duration="926000" />
       <workItem from="1606754248128" duration="557000" />
       <workItem from="1607090540754" duration="1508000" />
-      <workItem from="1607769409990" duration="4736000" />
+      <workItem from="1607769409990" duration="4983000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28187000" />
+    <option name="totallyTimeSpent" value="28434000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -444,11 +444,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab4/ActorSave.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#285#286#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lab4/UnitT.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="34" lean-forward="true" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
+        <state relative-caret-position="452">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
           <folding>
+            <element signature="e#601#602#0" expanded="true" />
             <element signature="e#633#634#0" expanded="true" />
             <element signature="e#668#669#0" expanded="true" />
             <element signature="e#699#700#0" expanded="true" />
@@ -464,22 +477,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab4/ActorSave.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#285#286#0" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lab4/ExecutorActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+        <state relative-caret-position="506">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
