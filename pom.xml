@@ -8,6 +8,12 @@
     <artifactId>padp</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <akka.version>2.5.26</akka.version>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <akka-http.version>10.1.10</akka-http.version>
+    </properties>
 
     <dependencies>
         <dependency>
