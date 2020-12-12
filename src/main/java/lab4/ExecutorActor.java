@@ -6,6 +6,6 @@ import javax.script.ScriptEngineManager;
 
 public class ExecutorActor {
     ScriptEngine engine = new ScriptEngineManager().getEngineByName("eName");
-    engine.eval
+    engine.eval()
 
 }
