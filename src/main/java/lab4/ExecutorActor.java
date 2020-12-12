@@ -21,7 +21,7 @@ public class ExecutorActor extends AbstractActor {
             } else {
                 response = 0;
             }
-            sender().tell(new Result(m.getPackageID(), ));
+            sender().tell(new Result(m.getPackageID(), m.getTestName(), ));
         }).build();
     }
 
