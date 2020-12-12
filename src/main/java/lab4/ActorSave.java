@@ -17,7 +17,7 @@ public class ActorSave extends AbstractActor {
             System.out.println("Message received" + m.getName());
             store.put(m.getID(), new HashMap<>());
         }).match(Integer.class, id -> {
-            Future<Object> result = Pattern.a
+            
             sender().tell();
         })
     }
