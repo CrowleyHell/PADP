@@ -17,11 +17,10 @@ public class ExecutorActor extends AbstractActor {
             Object result = invocable.invokeFunction(m.getFunctionName(), m.getParams().toArray().toString());
             String response;
             if (result.equals(m.getExpectedResult())) {
-                response = "true";
+                sender().tell(new Result(m.getPackageID(), m.getTestName(), 1), );
             } else {
                 response = "false";
             }
-            sender().tell(new Result(m.getPackageID(), m.getTestName(), response), );
         }).build();
     }
 
