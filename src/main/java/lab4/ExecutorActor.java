@@ -11,7 +11,7 @@ public class ExecutorActor extends AbstractActor {
     public Receive createReceive(){
         return receiveBuilder().match(UnitT.class, m -> {
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("eName");
-            engine.eval(m.getJsScript())
+            engine.eval(m.getJsScript());
         })
 
     }
