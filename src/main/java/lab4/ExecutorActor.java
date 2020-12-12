@@ -9,7 +9,8 @@ import javax.script.ScriptEngine;
 import javax.script.ScriptEngineManager;
 
 public class ExecutorActor extends AbstractActor {
-    private static final NAME = 
+    private static final NAME = "eName";
+    
     public Receive createReceive(){
         return receiveBuilder().match(UnitT.class, m -> {
             ScriptEngine engine = new ScriptEngineManager().getEngineByName("eName");
