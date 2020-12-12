@@ -6,8 +6,7 @@ import akka.japi.pf.ReceiveBuilder;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.Future;
-import java.util.regex.Pattern;
+
 
 public class ActorSave extends AbstractActor {
     private Map<Integer, Map<Integer, String>> store = new HashMap<>();
@@ -23,7 +22,7 @@ public class ActorSave extends AbstractActor {
         }).match(Integer.class, id -> {
 
             sender().tell(IDoutput(id), self());
-        }).build()
+        }).build();
     }
 
 }
