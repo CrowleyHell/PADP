@@ -1,7 +1,8 @@
 package lab4;
 
-import jdk.javadoc.internal.doclets.formats.html.markup.Script;
+
+import javax.script.ScriptEngine;
 
 public class ExecutorActor {
-    Script E
+    ScriptEngine 
 }
