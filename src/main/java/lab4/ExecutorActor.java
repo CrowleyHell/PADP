@@ -16,7 +16,7 @@ public class ExecutorActor extends AbstractActor {
             Invocable invocable = (Invocable) engine;
             Object result = invocable.invokeFunction(m.getFunctionName(), m.getParams().toArray().toString());
             int response;
-            if (result.equals(m.g))
+            if (result.equals(m.getExpectedResult()))
         })
 
     }

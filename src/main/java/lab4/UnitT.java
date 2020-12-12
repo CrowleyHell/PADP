@@ -31,7 +31,7 @@ public class UnitT {
         return testName;
     }
 
-    public String getExpectedResulr() {
+    public String getExpectedResult() {
         return expectedResult;
     }
 
