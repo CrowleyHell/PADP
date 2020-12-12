@@ -6,6 +6,7 @@ import akka.japi.pf.ReceiveBuilder;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.Future;
 
 public class ActorSave extends AbstractActor {
     private Map<Integer, Map<String, String>> store = new HashMap<>();
@@ -15,6 +16,7 @@ public class ActorSave extends AbstractActor {
             System.out.println("Message received" + m.getName());
             store.put(m.getID(), new HashMap<>());
         }).match(Integer.class, id -> {
+            Future
             sender().tell();
         })
     }
