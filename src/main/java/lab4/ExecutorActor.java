@@ -12,7 +12,7 @@ public class ExecutorActor extends AbstractActor {
     public Receive createReceive(){
         return receiveBuilder().match()
         ScriptEngine engine = new ScriptEngineManager().getEngineByName("eName");
-        engine.eval()
+        engine.eval(j)
     }
 
 
