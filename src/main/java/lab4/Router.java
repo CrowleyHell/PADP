@@ -4,8 +4,8 @@ import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 
 public class Router {
-    private Route(ActorSystem actorSystem, ActorRef actorRef){
-
+    private Router Route(ActorSystem actorSystem, ActorRef actorRef){
+        
     }
 
 }
