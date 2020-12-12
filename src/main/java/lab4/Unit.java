@@ -1,5 +1,5 @@
 package lab4;
 
 public class Unit {
-    private final String packageID, 
+    private final String packageID, jsScript
 }
