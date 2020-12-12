@@ -4,6 +4,6 @@ import akka.actor.ActorSystem;
 
 public class AkkaMain {
     public static void main() throws Exception{
-        ActorSystem actorSystem =   
+        ActorSystem actorSystem =  ActorSystem.create()
     }
 }
