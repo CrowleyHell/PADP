@@ -1,16 +1,15 @@
 package lab4;
 
 public class TestResult {
-    private int ID;
-    private String name, res;
+    private String name, res, ID;
 
-    public TestResult(int ID, String name, String res) {
+    public TestResult(String ID, String name, String res) {
         this.ID = ID;
         this.name = name;
         this.res = res;
     }
 
-    public int getID() {
+    public String getID() {
         return ID;
     }
 
@@ -22,7 +21,7 @@ public class TestResult {
         return name;
     }
 
-    public void setID(int ID) {
+    public void setID(String ID) {
         this.ID = ID;
     }
 
