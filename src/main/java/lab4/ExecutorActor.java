@@ -10,18 +10,18 @@ import javax.script.ScriptEngineManager;
 
 public class ExecutorActor extends AbstractActor {
     private static final String NAME = "eName";
-    private static final String TRUE = "true";
-    private static final String FALSE = "false";
+    private static final String SUCCESS = "true";
+    private static final String FAIL = "false";
     public Receive createReceive(){
         return receiveBuilder().match(UnitT.class, m -> {
-            ScriptEngine engine = new ScriptEngineManager().getEngineByName("eName");
+            ScriptEngine engine = new ScriptEngineManager().getEngineByName(NAME);
             engine.eval(m.getJsScript());
             Invocable invocable = (Invocable) engine;
             Object result = invocable.invokeFunction(m.getFunctionName(), m.getParams().toArray().toString());
             if (result.equals(m.getExpectedResult())) {
-                sender().tell(new TestResult(m.getPackageID(),m.getTestName(), "true"), self());
+                sender().tell(new TestResult(m.getPackageID(),m.getTestName(), SUCCESS), self());
             } else {
-                sender().tell(new TestResult(m.getPackageID(),m.getTestName(), "false"), self());
+                sender().tell(new TestResult(m.getPackageID(),m.getTestName(), FAIL), self());
             }
         }).build();
     }
