@@ -5,7 +5,7 @@ import akka.actor.ActorSystem;
 import akka.http.javadsl.server.Route;
 
 public class Router {
-    private Route Route(ActorSystem actorSystem, ActorRef actorRef){
+    private Route Router(ActorSystem actorSystem, ActorRef actorRef){
         return bind()
     }
 
