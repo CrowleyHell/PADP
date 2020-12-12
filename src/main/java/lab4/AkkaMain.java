@@ -11,6 +11,6 @@ public class AkkaMain {
         Props props1 = Props.create(Router.class);
         ActorRef actorRef = actorSystem.actorOf(props1);
 
-        final Http
+        final Http = Http
     }
 }
