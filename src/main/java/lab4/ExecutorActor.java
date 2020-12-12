@@ -15,13 +15,13 @@ public class ExecutorActor extends AbstractActor {
             engine.eval(m.getJsScript());
             Invocable invocable = (Invocable) engine;
             Object result = invocable.invokeFunction(m.getFunctionName(), m.getParams().toArray().toString());
-            int response = -1;
+            String response;
             if (result.equals(m.getExpectedResult())) {
                 response = 1;
             } else {
                 response = 0;
             }
-            sender().tell(new Result(m.getPackageID(), m.getTestName(), response, ));
+            sender().tell(new Result(m.getPackageID(), m.getTestName(), response), );
         }).build();
     }
 
