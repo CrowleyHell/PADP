@@ -16,7 +16,7 @@ public class ExecutorActor extends AbstractActor {
             Invocable invocable = (Invocable) engine;
             Object result = invocable.invokeFunction(m.getFunctionName(), m.getParams().toArray().toString());
             if (result.equals(m.getExpectedResult())) {
-                sender().tell(new Result(m.getPackageID(), m.getTestName()), true );
+                sender().tell(new Result(m.getPackageID(),m.getTestName()), true );
             } else {
                 response = "false";
             }
