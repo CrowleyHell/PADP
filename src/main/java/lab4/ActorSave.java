@@ -11,7 +11,7 @@ public class ActorSave extends AbstractActor {
     private Map<String, String> store = new HashMap<>();
     @Override
     public Receive createReceive(){
-        return ReceiveBuilder.create().match()
+        return ReceiveBuilder.create().match(Test.)
     }
 
 }
