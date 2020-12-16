@@ -27,6 +27,7 @@ public class AkkaMain {
                 actorMaterializer
         );
         System.out.println("localhost:8040");
+        System.in.read();
         
     }
 
