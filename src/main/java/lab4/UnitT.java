@@ -4,9 +4,9 @@ import java.util.ArrayList;
 
 public class UnitT {
     private final String packageID, jsScript, functionName, testName, expectedResult;
-    private final ArrayList<Integer> params;
+    private final ArrayList<Object> params;
 
-    public UnitT(String packageID, String jsScript, String functionName, String testName, String expectedResulr, ArrayList<Integer> params) {
+    public UnitT(String packageID, String jsScript, String functionName, String testName, String expectedResulr, ArrayList<Object> params) {
         this.packageID = packageID;
         this.jsScript = jsScript;
         this.functionName = functionName;
@@ -35,7 +35,7 @@ public class UnitT {
         return expectedResult;
     }
 
-    public ArrayList<Integer> getParams() {
+    public ArrayList<Object> getParams() {
         return params;
     }
 

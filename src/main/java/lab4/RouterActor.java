@@ -40,8 +40,13 @@ public class RouterActor extends AbstractActor {
     public Receive createReceive(){
         return ReceiveBuilder.create()
                 .match(JSONContainer.class, m->{
-                    
-                }).build();
+                    for(TestContainer t:m.getTests()){
+                        router.route(new UnitT(m.getPackageId(), m.getJsScript(), m.getFunctionName(), t.getTestName(),t.getExpectedResult(), t.getParams()), store);
+                    }
+                })
+                .match(String.class, s -> {
+                    store.tell(s, sender());
+                })
+                .build();
     }
-
 }
