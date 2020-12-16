@@ -21,13 +21,13 @@ import akka.http.javadsl.model.HttpResponse;
 import static java.lang.Float.parseFloat;
 
 public class AkkaMain {
-    private final ActorRef actorRef;
     public static void main(String[] args) throws IOException{
         System.out.println("start");
         ActorSystem actorSystem = ActorSystem.create("routes");
+        private final ActorRef actorRef;
         final Http http = Http.get(actorSystem);
         final ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
-        final Flow<HttpRequest, HttpResponse, NotUsed> flow = actorFlow(http, actorMaterializer, actorSystem);
+        final Flow<HttpRequest, HttpResponse, NotUsed> flow = actorFlow(http, actorMaterializer, actorRef);
         final CompletionStage<ServerBinding> bindingCompletionStage = http.bindAndHandle(
                 flow,
                 ConnectHttp.toHost("localhost", 8040),
