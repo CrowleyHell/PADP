@@ -33,6 +33,8 @@ public class AkkaMain {
     }
 
     private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
-        return Flow.of(HttpRequest.class).map(h->)
+        return Flow.of(HttpRequest.class).map(h->{
+            
+        })
     }
 }
