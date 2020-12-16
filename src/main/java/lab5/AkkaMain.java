@@ -6,6 +6,7 @@ import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
 import akka.japi.Pair;
+import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
@@ -43,6 +44,6 @@ public class AkkaMain {
             Float countFloat = parseFloat(count);
             return new Pair<String, Float>(url, countFloat);
         })
-                .mapAsync(1, (Pair<String, Float> pair) -> Pattern)
+                .mapAsync(1, (Pair<String, Float> pair) -> Patterns.ask())
     }
 }
