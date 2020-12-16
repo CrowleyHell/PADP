@@ -25,7 +25,7 @@ public class AkkaMain {
     public static void main(String[] args) throws IOException{
         System.out.println("start");
         ActorSystem actorSystem = ActorSystem.create("routes");
-        ActorRef actorRef = actorSystem.actorOf(Props.create());
+        ActorRef actorRef = actorSystem.actorOf(Props.create(MainActor.class));
         final Http http = Http.get(actorSystem);
         final ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
         final Flow<HttpRequest, HttpResponse, NotUsed> flow = actorFlow(http, actorMaterializer, actorRef);
