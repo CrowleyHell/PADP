@@ -24,7 +24,7 @@ public class AkkaMain {
         final CompletionStage<ServerBinding> bindingCompletionStage = http.bindAndHandle(
                 flow,
                 ConnectHttp.toHost("localhost", 8040),
-                
+                actorMaterializer
         )
     }
 
