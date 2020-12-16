@@ -22,8 +22,4 @@ public class Result {
     public Map<String, String> getResult() {
         return result;
     }
-
-    public void setResult(Map<String, String> result) {
-        this.result = result;
-    }
 }
