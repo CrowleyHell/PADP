@@ -48,7 +48,8 @@ public class AkkaMain {
             return new Pair<>(url, countFloat);
         })
                 .mapAsync(2, (Pair<String, Float> pair) ->
-                        Patterns.ask(actorRef, pair.first(), 40).thenCompose(Object o)->{
+                        Patterns.ask(actorRef, pair.first(), 40).thenCompose(o)->{
+                    
 
         })
     }
