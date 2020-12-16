@@ -19,5 +19,5 @@ public class AkkaMain {
         final Flow<HttpRequest, HttpResponse, NotUsed> flow =
     }
 
-    private static 
+    private static Flow<> 
 }
