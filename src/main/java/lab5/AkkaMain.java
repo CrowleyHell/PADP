@@ -23,7 +23,7 @@ public class AkkaMain {
         final Flow<HttpRequest, HttpResponse, NotUsed> flow = actorFlow(http, actorMaterializer, actorSystem);
         final CompletionStage<ServerBinding> bindingCompletionStage = http.bindAndHandle(
                 flow,
-                ConnectHttp.toHost("localhost")
+                ConnectHttp.toHost("localhost", )
         )
     }
 
