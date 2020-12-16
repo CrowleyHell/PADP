@@ -4,9 +4,9 @@
 
 [Лабораторная работа №2 (_сдана_)](#lab2)
 
-[Лабораторная работа №3 (_не сдана_)](#lab3)
+[Лабораторная работа №3 (_сделана_)](#lab3)
 
-[Лабораторная работа №4 (_в работе_)](#lab4)
+[Лабораторная работа №4 (_сделана_)](#lab4)
 
 <a name="lab1"><h3>Лабораторная работа №1</h3></a>
 Package: lab1
@@ -38,3 +38,16 @@ Output: outputs/lab3
 Run:
 
     spark-submit --class lab3.Lab3Main --master yarn-client --num-executors target/padp-1.0.jar airData.csv flyData.csv lab3
+    
+    
+    <a name="lab4"><h3>Лабораторная работа №4</h3></a>   
+Package: lab4
+
+Output: outputs/lab4
+
+Run:
+
+	mvn compile
+	
+	mvn exec:java -Dexec.mainClass="lab4.AkkaMain"
+
