@@ -45,11 +45,11 @@ public class AkkaMain {
             String url = h.getUri().query().get("test").get();
             String count = h.getUri().query().getOrElse("Counter", "1");
             Float countFloat = parseFloat(count);
-            return new Pair<String, Float>(url, countFloat);
+            return new Pair<>(url, countFloat);
         })
                 .mapAsync(1, (Pair<String, Float> pair) ->
                         Patterns.ask(actorRef, pair.first(), 40).thenCompose(Object o)->{
-                    
+
         })
     }
 }
