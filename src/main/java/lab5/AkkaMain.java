@@ -21,6 +21,7 @@ public class AkkaMain {
         final ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
         final Flow<HttpRequest, HttpResponse, NotUsed> flow = actorFlow(http, actorMaterializer, actorSystem);
         final CompletionStage<ServerBinding> bindingCompletionStage = http.bindAndHandle(
+                flow,
                 
         )
     }
