@@ -15,6 +15,8 @@ import java.util.concurrent.CompletionStage;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 
+import static java.lang.Float.parseFloat;
+
 public class AkkaMain {
     public static void main(String[] args) throws IOException{
         System.out.println("start");
@@ -37,7 +39,7 @@ public class AkkaMain {
         return Flow.of(HttpRequest.class).map(h->{
             String url = h.getUri().query().get("test").get();
             String count = h.getUri().query().getOrElse("Counter", "1");
-            return new Pair<String, Float>(url, count);
+            return new Pair<String, Float>(url, parseFloat(count));
         })
     }
 }
