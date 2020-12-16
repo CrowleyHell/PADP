@@ -7,6 +7,7 @@ import akka.stream.javadsl.Flow;
 
 import java.io.IOException;
 import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 public class AkkaMain {
     public static void main(String[] args) throws IOException{
@@ -14,6 +15,6 @@ public class AkkaMain {
         ActorSystem actorSystem = ActorSystem.create("routes");
         final Http http = Http.get(actorSystem);
         final ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
-        final Flow<HttpRequest, >
+        final Flow<HttpRequest, HttpResponse>
     }
 }
