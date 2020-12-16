@@ -2,6 +2,7 @@ package lab5;
 
 import akka.actor.ActorSystem;
 import akka.http.javadsl.Http;
+import akka.stream.ActorMaterializer;
 
 import java.io.IOException;
 
@@ -10,6 +11,6 @@ public class AkkaMain {
         System.out.println("start");
         ActorSystem actorSystem = ActorSystem.create("routes");
         final Http http = Http.get(actorSystem);
-        final 
+        final ActorMaterializer actorMaterializer = 
     }
 }
