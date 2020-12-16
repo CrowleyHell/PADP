@@ -1,5 +1,7 @@
 package lab5;
 
-public class MainActor {
+import akka.actor.AbstractActor;
+
+public class MainActor extends AbstractActor {
     
 }
