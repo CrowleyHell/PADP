@@ -14,7 +14,6 @@ import akka.stream.javadsl.Flow;
 
 import java.io.IOException;
 import java.util.concurrent.CompletionStage;
-import java.util.regex.Pattern;
 
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
@@ -49,6 +48,6 @@ public class AkkaMain {
             return new Pair<String, Float>(url, countFloat);
         })
                 .mapAsync(1, (Pair<String, Float> pair) ->
-                        Patterns.ask(actorRef, pair.first(), 40).)
+                        Patterns.ask(actorRef, pair.first(), 40).thenCompose())
     }
 }
