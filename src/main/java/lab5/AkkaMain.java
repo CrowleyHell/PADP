@@ -39,6 +39,10 @@ public class AkkaMain {
                 .thenAccept(u->actorSystem.terminate());
     }
 
+    public AkkaMain(ActorRef actorRef) {
+        this.actorRef = actorRef;
+    }
+
     private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
         return Flow.of(HttpRequest.class).map(h->{
             String url = h.getUri().query().get("test").get();
