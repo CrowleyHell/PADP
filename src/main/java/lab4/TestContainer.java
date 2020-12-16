@@ -6,11 +6,15 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import java.util.ArrayList;
 
 public class TestContainer {
-    private final String testName, expectedResult;
+    @JsonProperty("testName")
+    private final String testName;
+    @JsonProperty("expectedResult")
+    private final String expectedResult;
+    @JsonProperty("params")
     private final ArrayList<Object> params;
 
     @JsonCreator
-    public TestContainer(@JsonProperty("testName")String testName, @JsonProperty("expectedResult") String expectedResult, @JsonProperty("params") ArrayList<Object> params) {
+    public TestContainer(@JsonProperty("testName") String testName, @JsonProperty("expectedResult") String expectedResult, @JsonProperty("params") ArrayList<Object> params) {
         this.testName = testName;
         this.expectedResult = expectedResult;
         this.params = params;

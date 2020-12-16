@@ -6,9 +6,13 @@ import org.codehaus.jackson.annotate.JsonProperty;
 import java.util.ArrayList;
 
 public class JSONContainer {
+    @JsonProperty("packageId")
     private final String packageId;
+    @JsonProperty("jsScript")
     private final String jsScript;
+    @JsonProperty("functionName")
     private final String functionName;
+    @JsonProperty("tests")
     private final ArrayList<TestContainer> tests;
 
     @JsonCreator
