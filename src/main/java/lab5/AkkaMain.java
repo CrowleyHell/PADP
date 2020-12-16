@@ -34,7 +34,7 @@ public class AkkaMain {
 
     private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
         return Flow.of(HttpRequest.class).map(h->{
-            String url = h.getUri().query().get("test")
+            String url = h.getUri().query().get("test").get()
         })
     }
 }
