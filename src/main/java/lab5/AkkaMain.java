@@ -41,6 +41,7 @@ public class AkkaMain {
             String count = h.getUri().query().getOrElse("Counter", "1");
             Float countFloat = parseFloat(count);
             return new Pair<String, Float>(url, countFloat);
+            
         })
     }
 }
