@@ -2,6 +2,7 @@ package lab5;
 
 import akka.NotUsed;
 import akka.actor.ActorSystem;
+import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
 import akka.stream.ActorMaterializer;
@@ -22,7 +23,7 @@ public class AkkaMain {
         final Flow<HttpRequest, HttpResponse, NotUsed> flow = actorFlow(http, actorMaterializer, actorSystem);
         final CompletionStage<ServerBinding> bindingCompletionStage = http.bindAndHandle(
                 flow,
-                
+                ConnectHttp.toHost()
         )
     }
 
