@@ -8,15 +8,24 @@ import akka.routing.Router;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class RouterActor extends AbstractActor {
     private ActorRef store;
     private Router router;
     private static final int TRIES = 5;
     private static final Duration TIMEOUT = Duration.ofSeconds(40);
-    private SupervisorStrategy supervisorStrategy = new OneForOneStrateg(
-            TRIES, TIMEOUT, 
+    private SupervisorStrategy supervisorStrategy = new OneForOneStrategy(
+            TRIES, TIMEOUT, Collections.singletonList(Exception.class)
     );
+
+    @Override
+    public SupervisorStrategy supervisorStrategy() {
+        return super.supervisorStrategy();
+    }
+
+    @Override
+
     public RouterActor(){
         store = getContext().actorOf(Props.create(ActorSave.class));
         ArrayList<Routee> routees = new ArrayList<>();
