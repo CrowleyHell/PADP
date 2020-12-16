@@ -4,9 +4,9 @@ import java.util.Map;
 
 public class Result {
     private String id;
-    private Map<Integer, String> result;
+    private Map<String, String> result;
 
-    public Result(String id, Map<Integer, String> result) {
+    public Result(String id, Map<String, String> result) {
         this.id = id;
         this.result = result;
     }
@@ -19,11 +19,11 @@ public class Result {
         this.id = id;
     }
 
-    public Map<Integer, String> getResult() {
+    public Map<String, String> getResult() {
         return result;
     }
 
-    public void setResult(Map<Integer, String> result) {
+    public void setResult(Map<String, String> result) {
         this.result = result;
     }
 }

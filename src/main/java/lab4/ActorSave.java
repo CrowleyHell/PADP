@@ -9,7 +9,7 @@ import java.util.Map;
 
 
 public class ActorSave extends AbstractActor {
-    private Map<String, Map<Integer, String>> store = new HashMap<>();
+    private Map<String, Map<String, String>> store = new HashMap<>();
 
     private Result IDoutput(String id){
         return new Result(id, store.get(id));
@@ -20,7 +20,7 @@ public class ActorSave extends AbstractActor {
                 .match(TestResult.class, m -> {
                     System.out.println("Message received" + m.getName());
                     store.putIfAbsent(m.getID(), new HashMap<>());
-                    store.put(m.getID(), )})
+                    store.get(m.getID()).put(m.getName(), m.getRes());})
                 .match(String.class, id -> {
                     sender().tell(IDoutput(id), self());
         }).build();
