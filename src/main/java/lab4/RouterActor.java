@@ -5,14 +5,17 @@ import akka.routing.ActorRefRoutee;
 import akka.routing.RoundRobinRoutingLogic;
 import akka.routing.Routee;
 import akka.routing.Router;
+
+import java.time.Duration;
 import java.util.ArrayList;
 
 public class RouterActor extends AbstractActor {
     private ActorRef store;
     private Router router;
     private static final int TRIES = 5;
+    private static final Duration TIMEOUT = Duration.ofSeconds(40);
     private SupervisorStrategy supervisorStrategy = new OneForOneStrateg(
-            TRIES, 
+            TRIES, TIMEOUT, 
     );
     public RouterActor(){
         store = getContext().actorOf(Props.create(ActorSave.class));
