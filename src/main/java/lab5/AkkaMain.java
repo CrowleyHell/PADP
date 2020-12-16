@@ -49,7 +49,7 @@ public class AkkaMain {
         })
                 .mapAsync(2, (Pair<String, Float> pair) ->
                         Patterns.ask(actorRef, pair.first(), 40).thenCompose(o)->{
-                    
+                    if((float) o)
 
         })
     }
