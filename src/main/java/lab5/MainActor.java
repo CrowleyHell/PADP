@@ -14,6 +14,8 @@ public class MainActor extends AbstractActor {
                 .match(String.class, s -> {
                     sender().tell(store.getOrDefault(s, (float)-1.0), ActorRef.noSender()))
                 })
-                .match()
+                .match(MessageStore.class, m->{
+                    
+                })
     }
 }
