@@ -17,5 +17,6 @@ public class MainActor extends AbstractActor {
                 .match(MessageStore.class, m->{
                     store.putIfAbsent(m.getUrl(), m.getTime())
                 })
+                .build();
     }
 }
