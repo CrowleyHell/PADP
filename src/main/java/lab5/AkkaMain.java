@@ -9,6 +9,7 @@ public class AkkaMain {
     public static void main(String[] args) throws IOException{
         System.out.println("start");
         ActorSystem actorSystem = ActorSystem.create("routes");
-        final Http http = h
+        final Http http = Http.get(actorSystem);
+        
     }
 }
