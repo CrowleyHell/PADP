@@ -52,7 +52,7 @@ public class AkkaMain {
                 .mapAsync(2, (Pair<String, Float> pair) ->
                         Patterns.ask(actorRef, pair.first(), 40).thenCompose(o)->{
                     if((float) o >= 0){
-                        return CompletableFuture.completedFuture()
+                        return CompletableFuture.completedFuture(new Pair())
                     }
 
         })
