@@ -1,6 +1,7 @@
 package lab5;
 
 import akka.actor.AbstractActor;
+import akka.actor.ActorRef;
 import akka.japi.pf.ReceiveBuilder;
 
 import java.util.HashMap;
@@ -11,7 +12,7 @@ public class MainActor extends AbstractActor {
     public Receive createReceive(){
         return ReceiveBuilder.create()
                 .match(String.class, s -> {
-                    sender().tell(store.getOrDefault(s, (float)-1.0), );
+                    sender().tell(store.getOrDefault(s, (float)-1.0), ActorRef.noSender());
                 })
     }
 }
