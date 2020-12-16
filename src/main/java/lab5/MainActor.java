@@ -11,7 +11,7 @@ public class MainActor extends AbstractActor {
     public Receive createReceive(){
         return ReceiveBuilder.create()
                 .match(String.class, s -> {
-                    sender().tell(store.getOrDefault());
+                    sender().tell(store.getOrDefault(s, ));
                 })
     }
 }
