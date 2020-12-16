@@ -10,10 +10,11 @@ public class JSONContainer {
     private final ArrayList<TestContainer> tests;
 
     @JsonCreator
-    public JSONContainer(@JsonProperty String packageId, String jsScript, String functionName) {
+    public JSONContainer(@JsonProperty("packageId") String packageId, @JsonProperty("jsScript") String jsScript, @JsonProperty("functionName") String functionName, @JsonProperty("tests") ArrayList<TestContainer> tests) {
         this.packageId = packageId;
         this.jsScript = jsScript;
         this.functionName = functionName;
+        this.tests = tests;
     }
 
     public String getPackageId() {
@@ -28,4 +29,7 @@ public class JSONContainer {
         return functionName;
     }
 
+    public ArrayList<TestContainer> getTests() {
+        return tests;
+    }
 }

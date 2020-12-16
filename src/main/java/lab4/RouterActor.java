@@ -39,7 +39,9 @@ public class RouterActor extends AbstractActor {
 
     public Receive createReceive(){
         return ReceiveBuilder.create()
-                .match(A)
+                .match(JSONContainer.class, m->{
+                    
+                })
     }
 
 }
