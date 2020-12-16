@@ -38,7 +38,6 @@ public class AkkaMain {
             String url = h.getUri().query().get("test").get();
             String count = h.getUri().query().getOrElse("Counter", "1");
             return new Pair<>(url, count);
-            
         })
     }
 }
