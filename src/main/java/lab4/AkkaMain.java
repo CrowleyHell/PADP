@@ -23,7 +23,7 @@ import scala.concurrent.Future;
 import static akka.http.javadsl.server.Directives.*;
 
 public class AkkaMain {
-    public static void main() throws Exception{
+    public static void main(String[] args) throws Exception{
         ActorSystem actorSystem =  ActorSystem.create("Akka");
         Props props1 = Props.create(RouterActor.class);
         ActorRef actorRef = actorSystem.actorOf(props1);
