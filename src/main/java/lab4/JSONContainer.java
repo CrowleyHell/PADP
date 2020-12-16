@@ -3,17 +3,17 @@ package lab4;
 import java.util.ArrayList;
 
 public class JSONContainer {
-    private final String packageID, jsScript, functionName;
-    private final ArrayList<TestContainer> test
+    private final String packageId, jsScript, functionName;
+    private final ArrayList<TestContainer> tests
 
-    public JSONContainer(String packageID, String jsScript, String functionName) {
-        this.packageID = packageID;
+    public JSONContainer(String packageId, String jsScript, String functionName) {
+        this.packageId = packageId;
         this.jsScript = jsScript;
         this.functionName = functionName;
     }
 
-    public String getPackageID() {
-        return packageID;
+    public String getPackageId() {
+        return packageId;
     }
 
     public String getJsScript() {
