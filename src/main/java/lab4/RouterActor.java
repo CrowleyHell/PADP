@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class RouterActor extends AbstractActor {
     private ActorRef store;
     private Router router;
-    private SupervisorStrategy supervisorStrategy;
+    private SupervisorStrategy supervisorStrategy = new OneForOneStrategy();
     public RouterActor(){
         store = getContext().actorOf(Props.create(ActorSave.class));
         ArrayList<Routee> routees = new ArrayList<>();
