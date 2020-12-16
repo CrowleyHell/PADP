@@ -25,7 +25,7 @@ public class AkkaMain {
                 flow,
                 ConnectHttp.toHost("localhost", 8040),
                 actorMaterializer
-        )
+        );
     }
 
     private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
