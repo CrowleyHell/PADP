@@ -30,13 +30,14 @@ public class RouterActor extends AbstractActor {
         ArrayList<Routee> routees = new ArrayList<>();
         for (int i = 0; i < 3; i++){
             ActorRef actorRef = getContext().actorOf(Props.create(ExecutorActor.class));
+            getContext().watch(actorRef);
             routees.add(new ActorRefRoutee(actorRef));
         }
         router = new Router(new RoundRobinRoutingLogic(), routees);
     }
 
     public Receive createReceive(){
-
+        
     }
 
 }
