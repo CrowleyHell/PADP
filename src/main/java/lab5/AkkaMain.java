@@ -39,7 +39,7 @@ public class AkkaMain {
                 .thenAccept(u->actorSystem.terminate());
     }
 
-    public AkkaMain(ActorSystem actorSystem) {
+    public AkkaMain(ActorSystem actorSystem, ActorRef) {
         this.actorRef = actorSystem.actorOf(actorRef.props());
     }
 
