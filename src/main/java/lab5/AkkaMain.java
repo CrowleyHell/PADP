@@ -11,6 +11,7 @@ import akka.stream.javadsl.Flow;
 
 import java.io.IOException;
 import java.util.concurrent.CompletionStage;
+import java.util.regex.Pattern;
 
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
@@ -42,6 +43,6 @@ public class AkkaMain {
             Float countFloat = parseFloat(count);
             return new Pair<String, Float>(url, countFloat);
         })
-                .mapAsync(1, (Pair<String, Float> pair) -> )
+                .mapAsync(1, (Pair<String, Float> pair) -> Pattern)
     }
 }
