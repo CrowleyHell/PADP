@@ -11,6 +11,7 @@ public class AkkaMain {
         System.out.println("start");
         ActorSystem actorSystem = ActorSystem.create("routes");
         final Http http = Http.get(actorSystem);
-        final ActorMaterializer actorMaterializer = ActorMaterializer.create()
+        final ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
+        
     }
 }
