@@ -17,6 +17,7 @@ import java.util.concurrent.CompletionStage;
 
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
+import com.zaxxer.hikari.pool.HikariPool;
 
 import static java.lang.Float.parseFloat;
 
