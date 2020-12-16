@@ -26,7 +26,7 @@ public class AkkaMain {
                 ConnectHttp.toHost("localhost", 8040),
                 actorMaterializer
         );
-        System.out.println("Server online");
+        System.out.println("");
     }
 
     private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
