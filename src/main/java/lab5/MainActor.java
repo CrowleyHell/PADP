@@ -5,6 +5,6 @@ import akka.actor.AbstractActor;
 import java.util.Map;
 
 public class MainActor extends AbstractActor {
-    private final Map<String, >
+    private final Map<String, Float>
     public Receive createReceive()
 }
