@@ -13,7 +13,7 @@ public class MainActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(String.class, s -> {
                     sender().tell(store.getOrDefault(s, (float)-1.0), ActorRef.noSender()))
-                .match
                 })
+                .match()
     }
 }
