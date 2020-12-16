@@ -3,16 +3,13 @@ package lab4;
 import java.util.ArrayList;
 
 public class JSONContainer {
-    private final String packageID, jsScript, functionName, testName, expectedResult;
-    private final ArrayList<Integer> params;
+    private final String packageID, jsScript, functionName;
+    private final ArrayList<>
 
-    public UnitT(String packageID, String jsScript, String functionName, String testName, String expectedResulr, ArrayList<Integer> params) {
+    public JSONContainer(String packageID, String jsScript, String functionName) {
         this.packageID = packageID;
         this.jsScript = jsScript;
         this.functionName = functionName;
-        this.testName = testName;
-        this.expectedResult = expectedResulr;
-        this.params = params;
     }
 
     public String getPackageID() {
@@ -27,22 +24,4 @@ public class JSONContainer {
         return functionName;
     }
 
-    public String getTestName() {
-        return testName;
-    }
-
-    public String getExpectedResult() {
-        return expectedResult;
-    }
-
-    public ArrayList<Integer> getParams() {
-        return params;
-    }
-
-    @Override
-    public String toString() {
-        return "UnitT{" +
-                "params=" + params +
-                '}';
-    }
 }
