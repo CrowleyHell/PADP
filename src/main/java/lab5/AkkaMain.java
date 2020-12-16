@@ -40,7 +40,7 @@ public class AkkaMain {
     }
 
     public AkkaMain(ActorSystem actorSystem) {
-        this.actorRef = actorRef.actorOf(actorRef.props());
+        this.actorRef = actorSystem.actorOf(actorRef.props());
     }
 
     private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
