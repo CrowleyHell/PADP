@@ -1,6 +1,7 @@
 package lab4;
 
 import akka.actor.*;
+import akka.japi.pf.ReceiveBuilder;
 import akka.routing.ActorRefRoutee;
 import akka.routing.RoundRobinRoutingLogic;
 import akka.routing.Routee;
@@ -37,7 +38,7 @@ public class RouterActor extends AbstractActor {
     }
 
     public Receive createReceive(){
-        
+        return ReceiveBuilder()
     }
 
 }
