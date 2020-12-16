@@ -3,6 +3,7 @@ package lab5;
 import akka.NotUsed;
 import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
+import akka.actor.Props;
 import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
@@ -24,7 +25,7 @@ public class AkkaMain {
     public static void main(String[] args) throws IOException{
         System.out.println("start");
         ActorSystem actorSystem = ActorSystem.create("routes");
-        ActorRef actorRef = actorSystem.actorOf();
+        ActorRef actorRef = actorSystem.actorOf(Props.create());
         final Http http = Http.get(actorSystem);
         final ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
         final Flow<HttpRequest, HttpResponse, NotUsed> flow = actorFlow(http, actorMaterializer, actorRef);
