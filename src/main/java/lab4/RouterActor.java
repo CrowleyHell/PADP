@@ -24,7 +24,6 @@ public class RouterActor extends AbstractActor {
         return super.supervisorStrategy();
     }
 
-    @Override
 
     public RouterActor(){
         store = getContext().actorOf(Props.create(ActorSave.class));
