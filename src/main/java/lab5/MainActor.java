@@ -10,7 +10,7 @@ public class MainActor extends AbstractActor {
     private final Map<String, Float> store = new HashMap<>();
     public Receive createReceive(){
         return ReceiveBuilder.create()
-                .match(String.class, s -> {
+                .match(String.class, s -> { 
                     sender().tell(store.getOrDefault(s, (Float)-1.0));
                 })
     }
