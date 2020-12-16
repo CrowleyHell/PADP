@@ -1,9 +1,6 @@
 package lab4;
 
-import akka.actor.AbstractActor;
-import akka.actor.ActorRef;
-import akka.actor.ActorSystem;
-import akka.actor.Props;
+import akka.actor.*;
 import akka.http.javadsl.server.AllDirectives;
 import akka.http.javadsl.server.Route;
 import akka.routing.ActorRefRoutee;
@@ -15,6 +12,7 @@ import java.util.ArrayList;
 public class RouterActor extends AbstractActor {
     private ActorRef store;
     private Router router;
+    private SupervisorStrategy supervisorStrategy;
     public RouterActor(){
         store = getContext().actorOf(Props.create(ActorSave.class));
         ArrayList<Routee> routees = new ArrayList<>();
