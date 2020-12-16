@@ -40,7 +40,7 @@ Run:
     spark-submit --class lab3.Lab3Main --master yarn-client --num-executors target/padp-1.0.jar airData.csv flyData.csv lab3
     
     
-    <a name="lab4"><h3>Лабораторная работа №4</h3></a>   
+<a name="lab4"><h3>Лабораторная работа №4</h3></a>   
 Package: lab4
 
 Output: outputs/lab4
