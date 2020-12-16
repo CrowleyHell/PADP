@@ -41,7 +41,7 @@ public class RouterActor extends AbstractActor {
         return ReceiveBuilder.create()
                 .match(JSONContainer.class, m->{
                     
-                })
+                }).build();
     }
 
 }
