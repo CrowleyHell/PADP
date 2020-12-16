@@ -29,7 +29,7 @@ public class AkkaMain {
         System.out.println("localhost:8040");
         System.in.read();
         bindingCompletionStage.thenCompose(ServerBinding::unbind)
-                .thenAccept(u->actorSystem.terminate())
+                .thenAccept(u->actorSystem.terminate());
     }
 
     private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
