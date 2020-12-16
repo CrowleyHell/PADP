@@ -40,11 +40,8 @@ public class AkkaMain {
                 .thenAccept(u->actorSystem.terminate());
     }
 
-    public AkkaMain(ActorSystem actorSystem, ActorRef) {
-        this.actorRef = actorSystem.actorOf(actorRef.props());
-    }
 
-    private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
+    private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorRef actorRef){
         return Flow.of(HttpRequest.class).map(h->{
             String url = h.getUri().query().get("test").get();
             String count = h.getUri().query().getOrElse("Counter", "1");
