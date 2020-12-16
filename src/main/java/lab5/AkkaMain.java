@@ -39,7 +39,8 @@ public class AkkaMain {
         return Flow.of(HttpRequest.class).map(h->{
             String url = h.getUri().query().get("test").get();
             String count = h.getUri().query().getOrElse("Counter", "1");
-            return new Pair<String, Float>(url, parseFloat(count));
+            Float countFloat = parseFloat(count);
+            return new Pair<String, Float>(url, countFloat);
         })
     }
 }
