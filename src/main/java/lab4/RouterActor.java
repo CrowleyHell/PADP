@@ -10,9 +10,9 @@ import java.util.ArrayList;
 public class RouterActor extends AbstractActor {
     private ActorRef store;
     private Router router;
-    
-    private SupervisorStrategy supervisorStrategy = new OneForOneStrategy(
-
+    private static final int TRIES = 5;
+    private SupervisorStrategy supervisorStrategy = new OneForOneStrateg(
+            TRIES, 
     );
     public RouterActor(){
         store = getContext().actorOf(Props.create(ActorSave.class));
