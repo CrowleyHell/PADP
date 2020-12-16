@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class JSONContainer {
     private final String packageID, jsScript, functionName;
-    private final ArrayList<>
+    private final ArrayList<TestContainer> test
 
     public JSONContainer(String packageID, String jsScript, String functionName) {
         this.packageID = packageID;
