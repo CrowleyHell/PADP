@@ -16,10 +16,10 @@ public class AkkaMain {
         ActorSystem actorSystem = ActorSystem.create("routes");
         final Http http = Http.get(actorSystem);
         final ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
-        final Flow<HttpRequest, HttpResponse, NotUsed> flow =
+        final Flow<HttpRequest, HttpResponse, NotUsed> flow = actorFlow().
     }
 
-    private static Flow<> actorFlow(){
-        
+    private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(){
+
     }
 }
