@@ -20,7 +20,7 @@ public class AkkaMain {
         final Http http = Http.get(actorSystem);
         final ActorMaterializer actorMaterializer = ActorMaterializer.create(actorSystem);
         final Flow<HttpRequest, HttpResponse, NotUsed> flow = actorFlow(http, actorMaterializer, actorSystem);
-        final CompletionStage<ServerBinding> bindingCompletionStage = http.
+        final CompletionStage<ServerBinding> bindingCompletionStage = http.bindAndHandle()
     }
 
     private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
