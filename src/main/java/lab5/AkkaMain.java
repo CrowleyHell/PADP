@@ -21,7 +21,7 @@ import akka.http.javadsl.model.HttpResponse;
 import static java.lang.Float.parseFloat;
 
 public class AkkaMain {
-    private final ActorRef actorReff;
+    private final ActorRef actorRef;
     public static void main(String[] args) throws IOException{
         System.out.println("start");
         ActorSystem actorSystem = ActorSystem.create("routes");
@@ -40,7 +40,7 @@ public class AkkaMain {
     }
 
     public AkkaMain(ActorSystem actorSystem) {
-        this.actorReff = actorSystem.actorOf(actorReff.props());
+        this.actorRef = actorSystem.actorOf(actorRef.props());
     }
 
     private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorSystem actorSystem){
