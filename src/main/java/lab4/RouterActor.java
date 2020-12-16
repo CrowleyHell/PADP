@@ -1,8 +1,6 @@
 package lab4;
 
 import akka.actor.*;
-import akka.http.javadsl.server.AllDirectives;
-import akka.http.javadsl.server.Route;
 import akka.routing.ActorRefRoutee;
 import akka.routing.RoundRobinRoutingLogic;
 import akka.routing.Routee;
@@ -12,7 +10,7 @@ import java.util.ArrayList;
 public class RouterActor extends AbstractActor {
     private ActorRef store;
     private Router router;
-    private SupervisorStrategy supervisorStrategy = new OneForOneStrategy();
+    private SupervisorStrategy supervisorStrategy = new OneForOneStrategy(E);
     public RouterActor(){
         store = getContext().actorOf(Props.create(ActorSave.class));
         ArrayList<Routee> routees = new ArrayList<>();
