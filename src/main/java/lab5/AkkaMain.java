@@ -64,7 +64,7 @@ public class AkkaMain {
                                 AsyncHttpClient asyncHttpClient = asyncHttpClient();
                                 long start = System.currentTimeMillis();
                                 asyncHttpClient.prepareGet(r).execute();
-                                
+                                return CompletableFuture
 
                             })
 
