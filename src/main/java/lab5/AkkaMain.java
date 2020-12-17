@@ -59,7 +59,7 @@ public class AkkaMain {
                     }
                     Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Float>>create()
                             .mapConcat(param -> {
-                                new ArrayList<In>(Collections.nCopies(param, param))
+                                new ArrayList<>(Collections.nCopies((int)param, ))
                             })
                             .run(actorMaterializer)
                             .thenApply(sum)
