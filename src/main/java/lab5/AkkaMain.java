@@ -58,15 +58,18 @@ public class AkkaMain {
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
                     }
-                    return Source.from(Collections.singletonList(pair))
-                            .toMat()
+                    Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Float>>create()
+                            .mapConcat(param -> new ArrayList<>(Collections.nCopies(param.second(), param.first())))
+                            .mapAsync(pair.getValue(), r -> {
+                                long start = System.currentTimeMillis();
+
+
+                            })
+
+
+                            })
+                            .run(actorMaterializer)
+                            .thenApply(sum)
         })
     })
-
-    private static Sink<Pair<String, Float>, CompletionStage<Float>> mySink(){
-            return Flow.<Pair<String, Float>>create()
-                    .mapConcat(param -> {
-                        new ArrayList<>(Collections.nCopies())
-                    })
-    }
 }
