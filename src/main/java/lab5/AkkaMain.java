@@ -13,6 +13,7 @@ import akka.stream.ActorMaterializer;
 import akka.stream.javadsl.Flow;
 
 import java.io.IOException;
+import java.time.Duration;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
@@ -50,7 +51,7 @@ public class AkkaMain {
             return new Pair<>(url, countFloat);
         })
                 .mapAsync(2, (Pair<String, Float> pair) ->
-                        Patterns.ask(actorRef, pair.first(), 40).thenCompose(o)->{
+                        Patterns.ask(actorRef, pair.first(), Duration.ofMillis()).thenCompose(o)->{
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Float>(o.first(), (float)h))
                     }
