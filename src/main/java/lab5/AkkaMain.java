@@ -59,7 +59,7 @@ public class AkkaMain {
                     return Source.from(Collections.singletonList(pair))
                             .toMat(Sink.fold(0, Long::sum), Keep.right())
                             .run(actorMaterializer)
-                            .
+                            .thenApply
         })
     })
 }
