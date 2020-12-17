@@ -14,6 +14,7 @@ import akka.stream.javadsl.Flow;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Collections;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
 
@@ -57,7 +58,7 @@ public class AkkaMain {
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
                     }
-                    return Source.from()
+                    return Source.from(Collections.)
         })
     })
 }
