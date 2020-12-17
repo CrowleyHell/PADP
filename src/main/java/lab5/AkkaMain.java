@@ -21,8 +21,8 @@ import java.util.concurrent.CompletionStage;
 
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
-import com.zaxxer.hikari.pool.HikariPool;
-
+import org.asynchttpclient.AsyncHttpClient;
+import static org.asynchttpclient.Dsl.asyncHttpClient;
 
 import static java.lang.Float.parseFloat;
 
