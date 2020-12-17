@@ -58,7 +58,7 @@ public class AkkaMain {
                         return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
                     }
                     Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Float>>create()
-                            .mapConcat(param -> new ArrayList<>(Collections.nCopies())
+                            .mapConcat(param -> new ArrayList<>(Collections.nCopies()))
 
 
                             })
