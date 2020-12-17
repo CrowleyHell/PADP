@@ -52,7 +52,7 @@ public class AkkaMain {
             Float countFloat = parseFloat(count);
             return new Pair<>(url, countFloat);
         })
-                .mapAsync(2, (Pair<String, Float> pair) ->
+                .mapAsync(2, (pair) ->
                         Patterns.ask(actorRef, pair.first(), Duration.ofSeconds(40)).thenCompose((Object o)->{
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
