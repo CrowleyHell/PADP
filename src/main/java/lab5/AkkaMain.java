@@ -20,6 +20,7 @@ import java.util.concurrent.CompletionStage;
 
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
+import akka.stream.javadsl.Sink;
 import akka.stream.javadsl.Source;
 import akka.stream.javadsl.Source$;
 import com.zaxxer.hikari.pool.HikariPool;
@@ -58,7 +59,7 @@ public class AkkaMain {
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
                     }
-                    return Source.from(Collections.singletonList(pair)).toMat()
+                    return Source.from(Collections.singletonList(pair)).toMat(Sink.fold())
         })
     })
 }
