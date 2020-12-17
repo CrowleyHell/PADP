@@ -59,6 +59,7 @@ public class AkkaMain {
                     }
                     Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Float>>create()
                             .mapConcat(param -> new ArrayList<>(Collections.nCopies()))
+                            .mapAsync()
 
 
                             })
