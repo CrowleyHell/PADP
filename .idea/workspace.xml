@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8ae8cd9a-4772-4a2a-8503-75d193d745ab" name="Default Changelist" comment="" />
+    <list default="true" id="8ae8cd9a-4772-4a2a-8503-75d193d745ab" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab5/AkkaMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab5/AkkaMain.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab5/AkkaMain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="36" column="10" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+            <state relative-caret-position="584">
+              <caret line="55" column="111" selection-start-line="55" selection-start-column="111" selection-end-line="55" selection-end-column="111" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -198,12 +200,12 @@
       <workItem from="1607090540754" duration="1508000" />
       <workItem from="1607769409990" duration="8626000" />
       <workItem from="1608124473141" duration="8916000" />
-      <workItem from="1608134457561" duration="5299000" />
+      <workItem from="1608134457561" duration="5561000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46292000" />
+    <option name="totallyTimeSpent" value="46554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -433,8 +435,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/lab5/AkkaMain.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="36" column="10" lean-forward="true" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+        <state relative-caret-position="584">
+          <caret line="55" column="111" selection-start-line="55" selection-start-column="111" selection-end-line="55" selection-end-column="111" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
