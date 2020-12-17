@@ -14,6 +14,7 @@ import akka.stream.javadsl.*;
 
 import java.io.IOException;
 import java.time.Duration;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
@@ -58,7 +59,7 @@ public class AkkaMain {
                     }
                     Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Float>>create()
                             .mapConcat(param -> {
-                                
+                                new ArrayList<>()
                             })
                             .run(actorMaterializer)
                             .thenApply(sum)
