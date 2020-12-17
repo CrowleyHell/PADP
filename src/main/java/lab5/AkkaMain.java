@@ -66,7 +66,7 @@ public class AkkaMain {
                                 asyncHttpClient.prepareGet(r).execute();
                                 return CompletableFuture.completedFuture(System.currentTimeMillis() - start);
                             });
-                    return Source
+                    return Source.single()
 
 
                             })
