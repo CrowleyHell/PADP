@@ -10,7 +10,7 @@ import akka.http.javadsl.ServerBinding;
 import akka.japi.Pair;
 import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
-import akka.stream.javadsl.*;
+
 
 import java.io.IOException;
 import java.time.Duration;
@@ -18,10 +18,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.CompletionStage;
+
+import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.Keep;
 import akka.stream.javadsl.Sink;
 
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
+import akka.stream.javadsl.Source;
 import org.asynchttpclient.AsyncHttpClient;
 import static org.asynchttpclient.Dsl.asyncHttpClient;
 
@@ -69,7 +73,7 @@ public class AkkaMain {
                             });
                     return Source.single(pair)
                             .via(floatNotUsedFlow)
-                            .toMat(Sink.fold(0L, Float::sum), Keep.right())
+                            .toMat(Sink.fold(0L, Long::sum), Keep.right())
                             .run(actorMaterializer)
                             .thenApply(sum)
                             })
