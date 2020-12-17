@@ -10,7 +10,7 @@ import akka.http.javadsl.ServerBinding;
 import akka.japi.Pair;
 import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
-import akka.stream.javadsl.Flow;
+import akka.stream.javadsl.*;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -20,9 +20,6 @@ import java.util.concurrent.CompletionStage;
 
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
-import akka.stream.javadsl.Sink;
-import akka.stream.javadsl.Source;
-import akka.stream.javadsl.Source$;
 import com.zaxxer.hikari.pool.HikariPool;
 
 import static java.lang.Float.parseFloat;
@@ -59,7 +56,7 @@ public class AkkaMain {
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
                     }
-                    return Source.from(Collections.singletonList(pair)).toMat(Sink.fold(0, Float::sum))
+                    return Source.from(Collections.singletonList(pair)).toMat(Sink.fold(0, Float::sum), Keep.right())
         })
     })
 }
