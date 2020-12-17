@@ -43,7 +43,7 @@ public class AkkaMain {
     }
 
 
-    final Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorRef actorRef){
+    private static Flow<HttpRequest, HttpResponse, NotUsed> actorFlow(Http http, ActorMaterializer actorMaterializer, ActorRef actorRef){
         return Flow.of(HttpRequest.class).map(h->{
             String url = h.getUri().query().get("test").get();
             String count = h.getUri().query().getOrElse("Counter", "1");
