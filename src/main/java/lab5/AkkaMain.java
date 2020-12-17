@@ -63,7 +63,7 @@ public class AkkaMain {
                             .mapAsync(pair.second(), r -> {
                                 AsyncHttpClient asyncHttpClient = asyncHttpClient();
                                 long start = System.currentTimeMillis();
-                                asyncHttpClient.prepareGet(url)
+                                asyncHttpClient.prepareGet(r)
 
 
                             })
