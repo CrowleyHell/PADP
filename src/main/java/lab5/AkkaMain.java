@@ -56,7 +56,7 @@ public class AkkaMain {
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
                     }
-                    Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow<>
+                    Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow<Pair<String, Float>, Float, NotUsed>.
                                             .toMat(Sink.fold(0, Long::sum), Keep.right())
                             .run(actorMaterializer)
                             .thenApply(sum)
