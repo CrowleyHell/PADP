@@ -71,7 +71,6 @@ public class AkkaMain {
                             .toMat(Sink.fold(0L, Float::sum), Keep.right())
                             .run(actorMaterializer)
                             .thenApply(sum)
-
                             })
 
         })
