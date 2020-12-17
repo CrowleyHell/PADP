@@ -57,7 +57,9 @@ public class AkkaMain {
                         return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
                     }
                     Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Float>>create()
-                            .mapConcat()
+                            .mapConcat(param -> {
+                                
+                            })
                             .run(actorMaterializer)
                             .thenApply(sum)
         })
