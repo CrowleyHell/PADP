@@ -56,7 +56,9 @@ public class AkkaMain {
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
                     }
-                    return Source.from(Collections.singletonList(pair)).toMat(Sink.fold(0, Float::sum), Keep.right())
+                    return Source.from(Collections.singletonList(pair))
+                            .toMat(Sink.fold(0, Float::sum), Keep.right())
+                            .run(actorMaterializer)
         })
     })
 }
