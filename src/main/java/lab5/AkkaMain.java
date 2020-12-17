@@ -60,9 +60,9 @@ public class AkkaMain {
                     }
                     Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Float>>create()
                             .mapConcat(param -> new ArrayList<>(Collections.nCopies(param.second(), param.first())))
-                            .mapAsync(pair.getValue(), r -> {
+                            .mapAsync(pair.second(), r -> {
                                 long start = System.currentTimeMillis();
-
+                                
 
                             })
 
