@@ -63,5 +63,7 @@ public class AkkaMain {
         })
     })
 
-    private static Sink<Pair<String, Float>, CompletionStage<Float>> 
+    private static Sink<Pair<String, Float>, CompletionStage<Float>> mySink(){
+            
+    }
 }
