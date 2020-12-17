@@ -68,7 +68,7 @@ public class AkkaMain {
                             });
                     return Source.single(pair)
                             .via(floatNotUsedFlow)
-                            .toMat()
+                            .toMat(Sink.fold())
 
 
                             })
