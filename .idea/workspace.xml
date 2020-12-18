@@ -17,7 +17,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/lab5/AkkaMain.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="660">
-              <caret line="80" column="75" selection-start-line="80" selection-start-column="75" selection-end-line="80" selection-end-column="75" />
+              <caret line="79" column="89" lean-forward="true" selection-start-line="79" selection-start-column="89" selection-end-line="79" selection-end-column="89" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2673#2694#0" expanded="true" />
@@ -205,12 +205,12 @@
       <workItem from="1608124473141" duration="8916000" />
       <workItem from="1608134457561" duration="12790000" />
       <workItem from="1608290649438" duration="324000" />
-      <workItem from="1608291145361" duration="832000" />
+      <workItem from="1608291145361" duration="1157000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54939000" />
+    <option name="totallyTimeSpent" value="55264000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1920" height="1053" extended-state="6" />
@@ -442,7 +442,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/lab5/AkkaMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
-          <caret line="80" column="75" selection-start-line="80" selection-start-column="75" selection-end-line="80" selection-end-column="75" />
+          <caret line="79" column="89" lean-forward="true" selection-start-line="79" selection-start-column="89" selection-end-line="79" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2673#2694#0" expanded="true" />
