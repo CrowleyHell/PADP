@@ -78,7 +78,7 @@ public class AkkaMain {
                             .toMat(Sink.fold(0L, Long::sum), Keep.right())
                             .run(actorMaterializer)
                             .thenApply(sum -> {
-                                new Pair<>(pair.first(), sum/)
+                                new Pair<>(pair.first(), sum/pair.second())
                             })
                             })
 
