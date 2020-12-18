@@ -79,8 +79,8 @@ public class AkkaMain {
                             .run(actorMaterializer)
                             .thenApply(sum -> new Pair<>(pair.first(), sum/pair.second()));
                     }))
-                .map((Pair<String, Integer> par) -> {
-                    
+                .map((par) -> {
+
 
                         }
 
