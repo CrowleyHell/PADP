@@ -77,7 +77,9 @@ public class AkkaMain {
                             .via(floatNotUsedFlow)
                             .toMat(Sink.fold(0L, Long::sum), Keep.right())
                             .run(actorMaterializer)
-                            .thenApply(sum)
+                            .thenApply(sum -> {
+                                
+                            })
                             })
 
         })
