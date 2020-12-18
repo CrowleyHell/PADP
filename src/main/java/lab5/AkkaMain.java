@@ -7,6 +7,7 @@ import akka.actor.Props;
 import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
+import akka.http.javadsl.model.HttpEntities;
 import akka.japi.Pair;
 import akka.pattern.Patterns;
 import akka.stream.ActorMaterializer;
@@ -81,7 +82,7 @@ public class AkkaMain {
                     }))
                 .map((par) -> {
                     actorRef.tell(new MessageStore(par.first(), par.second()), ActorRef.noSender());
-                    return HttpResponse.create().withEntity(par.f)
+                    return HttpResponse.create().withEntity(HttpEntities)
 
                         }
 
