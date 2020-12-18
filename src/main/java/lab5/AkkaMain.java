@@ -65,7 +65,7 @@ public class AkkaMain {
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Integer>(pair.first(), (int)o));
                     }
-                    Flow<Pair<String, Integer>, Integer, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Integer>>create()
+                    Flow<Pair<String, Integer>, Long, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Integer>>create()
                             .mapConcat(param -> new ArrayList<>(Collections.nCopies(param.second(), param.first())))
                             .mapAsync(pair.second(), (String r) -> {
                                 AsyncHttpClient asyncHttpClient = asyncHttpClient();
