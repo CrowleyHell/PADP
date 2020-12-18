@@ -83,8 +83,7 @@ public class AkkaMain {
                 .map((par) -> {
                     actorRef.tell(new MessageStore(par.first(), par.second()), ActorRef.noSender());
                     return HttpResponse.create().withEntity(HttpEntities.create(par.second().toString()));
-
-                        }
+                });
 
     })
 }
