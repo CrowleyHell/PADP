@@ -60,7 +60,7 @@ public class AkkaMain {
             Integer countFloat = parseInt(count);
             return new Pair<>(url, countFloat);
         })
-                .mapAsync(2, (pair) ->
+                .mapAsync(2, (Pair<String, Integer> pair) ->
                         Patterns.ask(actorRef, pair.first(), Duration.ofSeconds(40)).thenCompose((Object o)->{
                     if((float) o >= 0){
                         return CompletableFuture.completedFuture(new Pair<String, Integer>(pair.first(), (int)o));
