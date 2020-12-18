@@ -85,5 +85,5 @@ public class AkkaMain {
                     return HttpResponse.create().withEntity(HttpEntities.create(par.second().toString()));
                 });
 
-    })
+    }
 }
