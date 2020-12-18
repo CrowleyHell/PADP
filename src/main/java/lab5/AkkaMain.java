@@ -80,7 +80,7 @@ public class AkkaMain {
                             .thenApply(sum -> new Pair<>(pair.first(), (int)(sum/pair.second())));
                     }))
                 .map((par) -> {
-                    actorRef.tell(new MessageStore(par.first(), par.second()));
+                    actorRef.tell(new MessageStore(par.first(), par.second(), actorRe));
 
                         }
 
