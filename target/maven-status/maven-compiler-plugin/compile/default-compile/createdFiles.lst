@@ -12,10 +12,13 @@ lab4/TestResult.class
 lab4/TestContainer.class
 lab2/Partnr.class
 lab4/JSONContainer.class
+lab5/AkkaMain.class
 lab4/RouterActor.class
 WordReducer.class
 lab3/Lab3Main.class
+lab5/MessageStore.class
 lab2/AirMapper.class
 WordCountApp.class
+lab5/MainActor.class
 lab2/GroupComp.class
 lab2/FlyMapper.class

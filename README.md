@@ -8,7 +8,7 @@
 
 [Лабораторная работа №4 (_сделана_)](#lab4)
 
-[Лабораторная работа №5 (_в работе_)(#lab5)
+[Лабораторная работа №5 (_сделана_)(#lab5)
 
 <a name="lab1"><h3>Лабораторная работа №1</h3></a>
 Package: lab1
@@ -52,4 +52,17 @@ Run:
 	mvn compile
 	
 	mvn exec:java -Dexec.mainClass="lab4.AkkaMain"
+	
+	
+<a name="lab5"><h3>Лабораторная работа №5</h3></a>   
+Package: lab5
+
+Output: --
+
+Run:
+
+	mvn compile
+	
+	mvn exec:java -Dexec.mainClass="lab5.AkkaMain"
+	
 
