@@ -2,9 +2,9 @@ package lab5;
 
 public class MessageStore {
     private final String url;
-    private final Float time;
+    private final int time;
 
-    public MessageStore(String url, Float time) {
+    public MessageStore(String url, int time) {
         this.url = url;
         this.time = time;
     }
@@ -13,7 +13,7 @@ public class MessageStore {
         return url;
     }
 
-    public Float getTime() {
+    public int getTime() {
         return time;
     }
 }
