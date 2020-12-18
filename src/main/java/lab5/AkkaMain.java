@@ -27,6 +27,8 @@ import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.stream.javadsl.Source;
 import org.asynchttpclient.AsyncHttpClient;
+
+import static java.lang.Integer.parseInt;
 import static org.asynchttpclient.Dsl.asyncHttpClient;
 
 import static java.lang.Float.parseFloat;
@@ -55,17 +57,17 @@ public class AkkaMain {
         return Flow.of(HttpRequest.class).map(h->{
             String url = h.getUri().query().get("test").get();
             String count = h.getUri().query().getOrElse("Counter", "1");
-            Float countFloat = parseFloat(count);
+            Integer countFloat = parseInt(count);
             return new Pair<>(url, countFloat);
         })
                 .mapAsync(2, (pair) ->
                         Patterns.ask(actorRef, pair.first(), Duration.ofSeconds(40)).thenCompose((Object o)->{
                     if((float) o >= 0){
-                        return CompletableFuture.completedFuture(new Pair<String, Float>(pair.first(), (float)o));
+                        return CompletableFuture.completedFuture(new Pair<String, Integer>(pair.first(), (int)o));
                     }
-                    Flow<Pair<String, Float>, Float, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Float>>create()
-                            .mapConcat(param -> new ArrayList<>(Collections.nCopies(param.second(), param.first())))
-                            .mapAsync(pair.second(), r -> {
+                    Flow<Pair<String, Integer>, Integer, NotUsed> floatNotUsedFlow = Flow.<Pair<String, Float>>create()
+                            .mapConcat(param -> new ArrayList<>(Collections.nCopies((param.second(), param.first())))
+                            .mapAsync(pair.second(), (String r) -> {
                                 AsyncHttpClient asyncHttpClient = asyncHttpClient();
                                 long start = System.currentTimeMillis();
                                 asyncHttpClient.prepareGet(r).execute();
